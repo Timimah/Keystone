@@ -1,0 +1,11 @@
+.dashboard{
+    position: absolute;
+    left: 0;
+}
+.dashboard-menu{
+    height: 100vh;
+}
+.nav-item:hover{
+    border: 1px solid white;
+    border-radius: 5px;
+}
