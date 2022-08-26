@@ -11,28 +11,111 @@
 </head>
 <body>
     <div class="bg-dark">
-        <nav class="w-100 bg-secondary">Lorem ipsum dolor sit.</nav>
+        <nav class="w-100 bg-secondary navbar">
+            <a href="" class="nav-brand"> KEYSTONE </a>
+            <ul class="nav">
+                <li class="nav-item nav-brand">Features</li>
+                <li class="nav-item nav-brand">Pricing</li>
+                <li class="nav-item nav-brand">Blog</li>
+                <li class="nav-item nav-brand"> Contact</li>
+                <li class="nav-item nav-brand">Login</li>
+                <li class="nav-item nav-brand">Sign up</li>
+            </ul>
+        </nav>
         <div class="dashboard row w-100">
             <div class="dashboard-menu bg-warning col-3 p-3">
                 <p class="dashboard-head">
-                    dashboard
+                    Hi,[username]
                 </p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">lorem4</a>
+                        <a href="#profile" class="nav-link">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">lorem4</a>
+                        <a href="#check-balance" class="nav-link">Check Balance</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">lorem4</a>
+                        <a href="#send-money" class="nav-link">Send Money</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">lorem4</a>
+                        <a href="#buy-airtime" class="nav-link">Buy Airtime</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#withdraw" class="nav-link">Withdraw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#get-statement" class="nav-link">Get Statement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sign Out</a>
                     </li>
                 </ul>
             </div>
-            <div class="dashboard-transactions bg-success col-6 offset-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+            <div class="dashboard-transactions bg-success col-6 offset-2">
+                <section id="profile">
+                    <div class="card">
+                        <div class="user-avatar">
+                            <div class="card-image"></div>
+                            <div class="user-address"></div>
+                        </div>
+                        <div class="user-details">
+                            <div>Name</div>
+                            <div>Address</div>
+                            <div>Phone Number</div>
+                            <div>Next of Kin</div>
+                            <div>
+                                <button>Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="check-balance">
+                    <div class="balance-card">
+                        <div>
+                            <p>Account Balance</p>
+                        </div>
+                        <div id="balance"></div>
+                    </div>
+                    <div class="transaction-history">
+
+                    </div>
+                </section>
+                <section id="send-money">
+                    <div class="form input-group-vertical w-75">
+                        <input class="form-control" type="number" name="" id="amount" placeholder="Amount"><br>
+                        <select class="form-control" name="" id="" placeholder="select bank">
+                            <option value="Kuda Bank">Kuda Microfinance Bank</option>
+                            <option value="Access bamk">Access Bank</option>
+                            <option value="Wema Bank">Wema Bank</option>
+                            <option value="Zenith Bank">Zenith Bank</option>
+                            <option value="GTB">Guarantee Trust Bank</option>
+                            <option value="Polaris">Polaris Bank</option>
+                        </select><br>
+                        <input class="form-control" type="number" name="" id="" placeholder="Account Number"><br>
+                        <input class="form-control" type="text" placeholder="Remark"><br>
+                        <button class="btn form-control">Send</button>
+                    </div>
+                </section>
+                <section id="buy-airtime">
+                    <div class="form input-group-vertical w-75">
+                        <input class="form-control" type="number" name="" id="" placeholder="Amount"><br>
+                        <select class="form-control" name="" id="">
+                            <option value="">MTN</option>
+                            <option value="">Airtel</option>
+                            <option value="">Glo</option>
+                            <option value="">9-Mobile</option>
+                        </select><br>
+                        <input class="form-control" type="number" name="" id="" placeholder="Phone Number"><br>
+                        <button class="btn form-control">Buy Airtime</button>
+                    </div>
+                </section>
+                <section id="withdraw" class="input-group-vertical form">
+                    <div id="balance form-control"></div>
+                    <input class="form-control" type="number" placeholder="amount"><br>
+                    <button class="btn form-control">withdraw</button>
+                </section>
+                <section id="get-statement"></section>
+            </div>
         </div>
     </div>
 </body>
