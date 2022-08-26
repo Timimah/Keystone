@@ -1,0 +1,11 @@
+.header{
+    display: inline-flex;
+    list-style: none;
+    height: 1in;
+    width: 100%;
+}
+.body{
+    display: flex;
+    height: 6in;
+    width: 100%;
+}
