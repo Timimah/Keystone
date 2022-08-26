@@ -1,10 +1,21 @@
+.navbar{
+    position: sticky;
+    top: 0;
+}
 .dashboard{
-    position: absolute;
+    position: relative;
     left: 0;
 }
 .dashboard-menu{
     height: 100vh;
-    position: sticky;
+    position: fixed;
+    /* top: 2.5em; */
+}
+.dashboard-transactions{
+    /* height: 100vh; */
+    z-index: -1;
+    position: relative;
+    /* top: 2.5em; */
 }
 .nav-item:hover{
     border: 1px solid white;
