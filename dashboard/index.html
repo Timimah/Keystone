@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Money</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styled.css">
 </head>
 <body style="background-color: #597b85;">
+    <div class="">
         <nav class="w-100 navbar navbar-colored" id="navBar">
             <ul class="nav">
                 <a href="" class="nav-link text-light">
@@ -46,19 +47,19 @@
                 </p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a href="/dashboard/index.html" class="nav-link  text-light">Profile</a>
+                        <a href="index.html" class="nav-link  text-light">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
+                        <a href="checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
+                        <a href="sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
+                        <a href="buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
+                        <a href="withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
                     </li>
                     <li class="nav-item">
                         <a href="#get-statement" class="nav-link  text-light">Get Statement</a>
@@ -69,25 +70,46 @@
                 </ul>
             </div>
             <div class="dashboard-transactions col-7 offset-4">
-                <section class="send-money my-5">
-                    <div class="form input-group-vertical w-100 p-5">
-                        <input class="form-control" type="number" name="" id="amount" placeholder="Amount"><br>
-                        <select class="form-control" name="" id="" placeholder="select bank">
-                            <option value="Kuda Bank">Kuda Microfinance Bank</option>
-                            <option value="Access bamk">Access Bank</option>
-                            <option value="Wema Bank">Wema Bank</option>
-                            <option value="Zenith Bank">Zenith Bank</option>
-                            <option value="GTB">Guarantee Trust Bank</option>
-                            <option value="Polaris">Polaris Bank</option>
-                        </select><br>
-                        <input class="form-control" type="number" name="" id="" placeholder="Account Number"><br>
-                        <input class="form-control" type="text" placeholder="Remark*" required><br>
-                        <button class="btn form-control w-25 text-light">Send</button>
+                <div class="text-light profile my-1">
+                    <div class="user-avatar text-center py-2">
+                        <div class="card-image p-1">
+                            <div class="image-container mx-auto d-block">
+                                <img class="m-3" id="useravatar" src="/images/male-avatar.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="user-address my-2 row">
+                            <span class="col-12">Aderibigbe Julius Boston</span>
+                            <span>No. 4 Keystone Street, Sterling park</span>
+                        </div>
                     </div>
-                </section>
+                    <div class="user-details my-4 mx-5">
+                        <div class="p-2 details mb-2">
+                            <h6>
+                                Aderibigbe Julius Boston
+                            </h6>
+                        </div>
+                        <div class="p-2 details mb-2">
+                            <h6>
+                                    No.4 Keystone Street, Sterling park
+                            </h6>
+                        </div>
+                        <div class="p-2 details mb-2">
+                            <h6>+2348001232656</h6>
+                        </div>
+                        <div class="p-2 details mb-2">
+                            <h6>Aderibigbe Williams Kenton</h6>
+                            <p>Brother</p>
+                        </div>
+                        <div class="">
+                            <button class="p-2 rounded my-4 w-25" type="submit">
+                                <a class="text-light" href="http://">Edit</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>    
+        </div>
+    </div>
 </body>
-<script src="/script/dashboard.js">
-</script>
+<script src="/script/dashboard.js"></script>
 </html>
