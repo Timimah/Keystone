@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/styled.css">
+</head>
+<body style="background-color: #597b85;">
+    <nav class="w-100 navbar navbar-colored" id="navBar">
+        <ul class="nav">
+            <a href="" class="nav-link text-light">
+                <h1 class="nav-brand">KEYSTONE</h1>
+            </a>
+            <li class="nav-item h-25" style="margin-left: 200px;margin-top: 10px;">
+                <a href="" class="nav-link text-light">Features</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                <a href="" class="nav-link text-light">Pricing</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                <a href="" class="nav-link text-light">Blog</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                <a href="" class="nav-link text-light">Contact</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 150px;margin-top: 10px;">
+                <a href="" class="nav-link text-light btn">
+                   Log In
+                </a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 10px; margin-top: 10px;">
+                <a href="" class="nav-link btn text-light">
+                    Sign up
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="dashboard row w-100">
+        <div class="dashboard-menu col-3 p-3">
+            <p class="dashboard-head">
+                Hi,[username]
+            </p>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="/dashboard/index.html" class="nav-link  text-light">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/dashboard/checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/dashboard/sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/dashboard/buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/dashboard/withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#get-statement" class="nav-link  text-light">Get Statement</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/index.html" class="nav-link  text-light">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+        <div class="dashboard-transactions col-7 offset-4">
+            <div class="input-group-vertical form withdraw fs-5" style="margin-top: 20%;">
+                <div id="balance form-control" class="text-light">Your Current balance is <span>$1000</span></div><br>
+                <input class="form-control" type="number" placeholder="Amount" required><br>
+                <input class="form-control" type="password" name="" id="user_password" placeholder="Password"> <br>
+                <button class="btn form-control text-light w-25">Withdraw</button>
+            </div>
+        </div>
+    </div> 
+    
+</body>
+<script src="/dashboard.js"></script>
+</html>

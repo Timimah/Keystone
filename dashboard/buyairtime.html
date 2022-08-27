@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Airtime</title>
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/styled.css">
+</head>
+<body style="background-color: #597b85;">
+    <div class="">
+        <nav class="w-100 navbar navbar-colored" id="navBar">
+            <ul class="nav">
+                <a href="" class="nav-link text-light">
+                    <h1 class="nav-brand">KEYSTONE</h1>
+                </a>
+                <li class="nav-item h-25" style="margin-left: 200px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Features</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Pricing</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Blog</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Contact</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 150px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light btn">
+                       Log In
+                    </a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 10px; margin-top: 10px;">
+                    <a href="" class="nav-link btn text-light">
+                        Sign up
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="dashboard row w-100">
+            <div class="dashboard-menu col-3 p-3">
+                <p class="dashboard-head">
+                    Hi,[username]
+                </p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link  text-light">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#get-statement" class="nav-link  text-light">Get Statement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link  text-light">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dashboard-transactions col-8 buy-airtime my-5 offset-4">
+                <div class="form input-group-vertical w-75">
+                    <input class="form-control" type="number" name="" id="" placeholder="Amount" required><br>
+                    <select class="form-control" name="" id="" required>
+                        <option value="">MTN</option>
+                        <option value="">Airtel</option>
+                        <option value="">Glo</option>
+                        <option value="">9-Mobile</option>
+                    </select><br>
+                    <input class="form-control" type="number" name="" id="" placeholder="Phone Number" required><br>
+                    <button class="btn form-control w-25 text-light">Buy Airtime</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="/script/dashboard.js"></script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Balance</title>
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/styled.css">
+</head>
+<body  style="background-color: #597b85;">
+    <div>
+        <nav class="w-100 navbar navbar-colored" id="navBar">
+            <ul class="nav">
+                <a href="" class="nav-link text-light">
+                    <h1 class="nav-brand">KEYSTONE</h1>
+                </a>
+                <li class="nav-item h-25" style="margin-left: 200px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Features</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Pricing</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Blog</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Contact</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 150px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light btn">
+                       Log In
+                    </a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 10px; margin-top: 10px;">
+                    <a href="" class="nav-link btn text-light">
+                        Sign up
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="dashboard row w-100">
+            <div class="dashboard-menu col-3 p-3">
+                <p class="dashboard-head">
+                    Hi,[username]
+                </p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link  text-light">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="checkbalance.html" class="nav-link  text-light">Check Balance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sendmoney.html" class="nav-link  text-light"  text-light>Send Money</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="buyairtime.html" class="nav-link  text-light">Buy Airtime</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="withdraw.html" class="nav-link  text-light">Withdraw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#get-statement" class="nav-link  text-light">Get Statement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link  text-light">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dashboard-transactions col-7 offset-4 my-5">
+                <div class="check-balance balance-card text-light text-center">
+                    <div>
+                        <p>Account Balance</p>
+                    </div>
+                    <div class="p-2 w-50 fs-4 mx-auto" style="background-color: #597b85;">
+                        <p id="balance">$1000</p>
+                        <div class="fs-5 justify-content-center mx-5">
+                            <ul class="d-flex" style="list-style-type: none;">
+                                <li class="mx-4">
+                                    <button href="http://" target="_blank" class="text-light btn">
+                                        Transfer
+                                    </button>
+                                </li>
+                                <li>
+                                    <button href="http://" target="_blank" class="text-light btn">
+                                            Save
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>     
+                    </div><br>
+                    <div class="transaction-history text-light p-3"  style="background-color: #243e48;">
+                        <p>You don't have any transactions yet</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+<script src="/script/dashboard.js"></script>
+</html>

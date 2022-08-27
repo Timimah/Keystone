@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/styled.css">
+</head>
+<body style="background-color: #597b85;">
+    <div class="">
+        <nav class="w-100 navbar navbar-colored" id="navBar">
+            <ul class="nav">
+                <a href="" class="nav-link text-light">
+                    <h1 class="nav-brand">KEYSTONE</h1>
+                </a>
+                <li class="nav-item h-25" style="margin-left: 200px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Features</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Pricing</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Blog</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 50px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light">Contact</a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 150px;margin-top: 10px;">
+                    <a href="" class="nav-link text-light btn">
+                       Log In
+                    </a>
+                </li>
+                <li class="nav-item h-25" style="margin-left: 10px; margin-top: 10px;">
+                    <a href="" class="nav-link btn text-light">
+                        Sign up
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="dashboard row w-100">
+            <div class="dashboard-menu col-3 p-3">
+                <p class="dashboard-head">
+                    Hi,[username]
+                </p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link  text-light">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#get-statement" class="nav-link  text-light">Get Statement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/index.html" class="nav-link  text-light">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="dashboard-transactions col-7 offset-4">
+                <div class="text-light profile my-1" id="user_profile">
+                    <div class="user-avatar text-center py-2">
+                        <div class="card-image p-1">
+                            <div class="image-container mx-auto d-block">
+                                <img class="m-3" id="useravatar" src="/images/male-avatar.jpeg" alt="">
+                            </div>
+                        </div>
+                        <div class="user-address my-2 row">
+                            <span class="col-12">Aderibigbe Julius Boston</span>
+                            <span>No. 4 Keystone Street, Sterling park</span>
+                        </div>
+                    </div>
+                    <div class="user-details my-4 mx-5">
+                        <div class="my-3 row" id="update_profile_success" style="display: none;">
+                            <h6 class="col-8" style="color:#162d34">
+                                Your profile has been successfully updated
+                            </h6>
+                            <p class="col-2">
+                                <button class="btn text-light" onclick="closeDiv()">close</button>
+                            </p>
+                        </div>
+                        <div class="p-2 details mb-2">
+                            <h6 id="user_name">
+                                Aderibigbe Julius Boston
+                            </h6>
+                        </div>
+                        <div class="p-2 details mb-2">
+                            <h6 id="user_address">
+                                    No.4 Keystone Street, Sterling park
+                            </h6>
+                        </div>
+                        <div class="p-2 details mb-2">
+                            <h6 id="user_number">+2348001232656</h6>
+                        </div>
+                        <div class="p-2 details mb-2">
+                            <h6 id="user_nok">Aderibigbe Williams Kenton</h6>
+                            <p id="user_nokrel">Brother</p>
+                        </div>
+                        <div class="">
+                            <button class="p-2 rounded my-4 w-25 text-light"  type="submit" onclick="editProfile()">Edit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-user-details form input-group-vertical my-5" id="edit_Details" style="display: none;">
+                    <input class="form-control" type="text" name="" id="user_name0" placeholder="Aderibigbe Julius Boston"><br>
+                    <input class="form-control" type="text" name="" id="user_address0" placeholder="No.4 Keystone street..."><br>
+                    <input class="form-control" type="text" name="" id="user_number0" placeholder="+234xxxx"><br>
+                    <input class="form-control" type="text" name="" id="user_nok0" placeholder="Aderibigbe Williams Kenton"><br>
+                    <input class="form-control" type="text" name="" id="user_nokrel1" placeholder="Relationship"><br>
+                    <button class="form-control btn w-50 text-light" onclick="editedProfile()">Edit Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/script/dashboard.js"></script>
+<script src="/script/profile.js"></script>
+</html>
