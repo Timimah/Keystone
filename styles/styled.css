@@ -53,7 +53,7 @@ button:hover{
 a{
     text-decoration: none;
 }
-img{
+img .m-3{
     border-radius: 50%;
     height: 6em;
     width: 6em;
