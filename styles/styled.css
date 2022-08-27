@@ -2,15 +2,15 @@
     position: sticky;
     top: 0;
 }
-.navbar-colored{
+/* .navbar-colored{
     background-color: #466873;
     border-bottom: 1px solid#243e48;
-}
-.navbar-colored .nav-item:hover{
+} */
+/* .navbar-colored .nav-item:hover{
     border-radius: 5px;
     background-color: #597b85;
     /* transition: 2s; */
-}
+
 .dashboard{
     position: relative;
     left: 0;
