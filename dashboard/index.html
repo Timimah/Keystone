@@ -70,7 +70,7 @@
                 </ul>
             </div>
             <div class="dashboard-transactions col-7 offset-4">
-                <div class="text-light profile my-1">
+                <div class="text-light profile my-1" id="user_profile">
                     <div class="user-avatar text-center py-2">
                         <div class="card-image p-1">
                             <div class="image-container mx-auto d-block">
@@ -83,33 +83,49 @@
                         </div>
                     </div>
                     <div class="user-details my-4 mx-5">
+                        <div class="my-3 row" id="update_profile_success" style="display: none;">
+                            <h6 class="col-8" style="color:#162d34">
+                                Your profile has been successfully updated
+                            </h6>
+                            <p class="col-2">
+                                <button class="btn text-light" onclick="closeDiv()">close</button>
+                            </p>
+                        </div>
                         <div class="p-2 details mb-2">
-                            <h6>
+                            <h6 id="user_name">
                                 Aderibigbe Julius Boston
                             </h6>
                         </div>
                         <div class="p-2 details mb-2">
-                            <h6>
+                            <h6 id="user_address">
                                     No.4 Keystone Street, Sterling park
                             </h6>
                         </div>
                         <div class="p-2 details mb-2">
-                            <h6>+2348001232656</h6>
+                            <h6 id="user_number">+2348001232656</h6>
                         </div>
                         <div class="p-2 details mb-2">
-                            <h6>Aderibigbe Williams Kenton</h6>
-                            <p>Brother</p>
+                            <h6 id="user_nok">Aderibigbe Williams Kenton</h6>
+                            <p id="user_nokrel">Brother</p>
                         </div>
                         <div class="">
-                            <button class="p-2 rounded my-4 w-25" type="submit">
-                                <a class="text-light" href="http://">Edit</a>
+                            <button class="p-2 rounded my-4 w-25 text-light"  type="submit" onclick="editProfile()">Edit
                             </button>
                         </div>
                     </div>
+                </div>
+                <div class="edit-user-details form input-group-vertical my-5" id="edit_Details" style="display: none;">
+                    <input class="form-control" type="text" name="" id="user_name0" placeholder="Aderibigbe Julius Boston"><br>
+                    <input class="form-control" type="text" name="" id="user_address0" placeholder="No.4 Keystone street..."><br>
+                    <input class="form-control" type="text" name="" id="user_number0" placeholder="+234xxxx"><br>
+                    <input class="form-control" type="text" name="" id="user_nok0" placeholder="Aderibigbe Williams Kenton"><br>
+                    <input class="form-control" type="text" name="" id="user_nokrel1" placeholder="Relationship"><br>
+                    <button class="form-control btn w-50 text-light" onclick="editedProfile()">Edit Details</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
 <script src="/script/dashboard.js"></script>
+<script src="/script/profile.js"></script>
 </html>
