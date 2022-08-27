@@ -9,11 +9,9 @@ body{
 }
 .body{
     display: flex;
-    height: 6in;
-    /* width: 100%; */
+    width: 100%;
 }
-.nav-item:hover, button:hover{
-    border-radius: 5px;
-    background-color: #466873;
-    transition: 2s;
-}
+/* .footer{
+    position: fixed;
+    bottom: 0;
+} */
