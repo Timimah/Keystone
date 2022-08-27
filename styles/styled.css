@@ -2,15 +2,23 @@
     position: sticky;
     top: 0;
 }
-/* .navbar-colored{
+.navbar-colored{
     background-color: #466873;
     border-bottom: 1px solid#243e48;
-} */
-/* .navbar-colored .nav-item:hover{
+}
+.navbar-colored .nav-item:hover{
     border-radius: 5px;
-    background-color: #597b85;
-    /* transition: 2s; */
-
+    background-color: #243e48;
+    transition: 2s;
+}
+button{
+    background-color: #243e48!important;
+    border: 0;
+}
+button:hover{
+    background-color: #466873!important;
+    transition: 1s;
+}
 .dashboard{
     position: relative;
     left: 0;
@@ -18,18 +26,18 @@
 .dashboard-menu{
     height: 100vh;
     position: fixed;
-    background-color: #466873;
+    background-color: #243e48;;
     /* top: 2.5em; */
 }
 .dashboard-transactions{
     /* height: 100vh; */
-    z-index: -2;
+    /* z-index: -2; */
     position: relative;
     /* background-color: #466873; */
 }
-.nav-item:hover, button:hover{
+.nav-item:hover{
     border-radius: 5px;
-    background-color: #466873;
+    background-color: #243e48;;
     transition: 2s;
 }
 .dashboard-menu .nav-item:hover{
@@ -42,18 +50,10 @@
     height: 8em;
     width: 8em;
 }
-button{
-    background-color: #243e48;
-    border: 0;
-}
-button:hover{
-    background-color: #466873;
-    transition: 2;
-}
 a{
     text-decoration: none;
 }
-img .m-3{
+#useravatar{
     border-radius: 50%;
     height: 6em;
     width: 6em;
@@ -62,31 +62,31 @@ img .m-3{
     background-color: #597b85;
     border-bottom: 1px solid #466873;
 }
-#profile{
+profile{
     /* position: fixed; */
     height: inherit;
-    background-color: #466873;
+    /* background-color: #466873; */
 }
-#check-balance{
+.check-balance{
     height: inherit;
-    background-color: #466873;
+    /* background-color: #466873; */
     margin-bottom: 2em;
     /* margin-top: 10em; */
 }
-#send-money{
+.send-money{
     height: inherit;
-    background-color: #466873;
+    /* background-color: #466873; */
     margin-bottom: 2em;
 }
-#buy-airtime{
+.buy-airtime{
     height: inherit;
-    background-color: #466873;
+    /* background-color: #466873; */
 }
-#withdraw{
+.withdraw{
     height: inherit;
-    background-color: #466873;
+    /* background-color: #466873; */
 }
-#get-statement{
+.get-statement{
     height: inherit;
-    background-color: #466873;
+    /* background-color: #466873; */
 }
