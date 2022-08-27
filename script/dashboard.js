@@ -9,3 +9,5 @@ window.onscroll = () =>{
         myNav.classList.remove('navbar-colored')
     }
 }
+let userBalance = document.getElementById('balance').innerText
+balance.innerText = userBalance
