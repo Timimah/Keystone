@@ -2,6 +2,7 @@
     position: sticky;
     top: 0;
 }
+
 .dashboard{
     position: relative;
     left: 0;
@@ -9,6 +10,7 @@
 .dashboard-menu{
     height: 100vh;
     position: fixed;
+    background-color: #466873;
     /* top: 2.5em; */
 }
 .dashboard-transactions{
@@ -17,7 +19,9 @@
     position: relative;
     /* top: 2.5em; */
 }
-.nav-item:hover{
-    border: 1px solid white;
+.nav-item:hover, button:hover{
     border-radius: 5px;
+    background-color: #466873;
+    transition: 2s;
 }
+
