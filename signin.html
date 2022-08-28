@@ -11,18 +11,26 @@
     <link rel="stylesheet" href="/styles/styled.css">
     <link rel="stylesheet" href="/styles/signin.css">
 </head>
+<style>
+  body{
+      background-image: url(/images/vecteezy_modern-wavy-lines-abstract-background-dark-blue-gradient_6395905.jpg);
+      background-size: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+ </style>
 <body>
   <center>
     <div id="box" class="col-sm-2 col-md-12 col-lg-9 py-5" >
-      <h3 class="mx-3 py-2" style="font-family: sans-serif; font-size: 30px; font-weight: bold; color: #2D2867;">SIGN IN</h3>
-      <div id="box2">
-      <label for="">Phone number</label><br>
-      <input type="text" class="btn btn-outline-info shadow-sm text-center rounded-pill shadow-sm text-center rounded-pill  " style="width: 100% ;" id="phoneNumber" ><br><br>
-      <label for="">password</label><br>
-      <input type="text" class="btn btn-outline-info shadow-sm text-center rounded-pill " style="width:100% ; " id="userPassword"><br><br>
+      <h3 class="mx-3 py-2" style="font-family: sans-serif; font-size: 30px; font-weight: bold; color: white;">SIGN IN</h3>
+      <div id="box2" class="">
+      <label for="" style="color: white;">Phone number</label><br>
+      <input type="text" class="btn btn-outline-light shadow-sm text-center rounded-pill shadow-sm text-center  " style="width: 100% ;" id="phoneNumber" placeholder="Phone number"><br><br>
+      <label for="" style="color: white;">password</label><br>
+      <input type="text" class="btn btn-outline-light shadow-sm text-center  rounded-pill " style="width:100% ; " id="userPassword" placeholder="password"><br><br>
       </div>
     
-      <span class="d-flex flex-row bd-highlight mb-3"><button class="btn-primary ms-2">√</button><a href="password.html" style="color: #2D2867;"> forgot password?</a></span><span class=" ps-2 d-flex flex-row-reverse bd-highlight" style="color: #2D2867; ">Don't have an account?<a href="/signup.html">signup</a></span>
+      <span class="d-flex flex-row bd-highlight mb-3"><button class="btn-primary ms-2">√</button><a href="password.html" style="color: white;"> forgot password?</a></span><span class=" ps-2 d-flex flex-row-reverse bd-highlight" style="color: #2D2867; ">Don't have an account?<a href="/signup.html">signup</a></span>
       <button onclick="signIn()" style="border-radius:20rem;width:300px;" class="btn btn-info my-3">sign in</button>
       
       <!-- <h6 style="color: #2D2867;"> <a href="password.html" style="color: #2D2867;"> forgot password?</a></h6>
