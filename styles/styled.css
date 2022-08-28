@@ -2,21 +2,26 @@
     position: sticky;
     top: 0;
 }
-.navbar-colored{
-    background-color: #466873;
-    border-bottom: 1px solid#243e48;
+.nav-item:hover{
+    border-radius: 5px;
+    background-color: #4c4495;
+    transition: 2s;
+}
+/* .navbar-colored{
+    background-color: #302a70;
+    border-bottom: 1px solid#2d2868;
 }
 .navbar-colored .nav-item:hover{
     border-radius: 5px;
     background-color: #243e48;
     transition: 2s;
-}
+} */
 button{
-    background-color: #243e48!important;
+    background-color: #4c4495!important;
     border: 0;
 }
 button:hover{
-    background-color: #466873!important;
+    background-color: #423b82!important;
     transition: 1s;
 }
 .dashboard{
@@ -26,7 +31,7 @@ button:hover{
 .dashboard-menu{
     height: 100vh;
     position: fixed;
-    background-color: #243e48;;
+    background-color: #4c4495;
     /* top: 2.5em; */
 }
 .dashboard-transactions{
@@ -35,17 +40,12 @@ button:hover{
     position: relative;
     /* background-color: #466873; */
 }
-.nav-item:hover{
-    border-radius: 5px;
-    background-color: #243e48;;
-    transition: 2s;
-}
 .dashboard-menu .nav-item:hover{
-    background-color: #597b85;
+    background-color: #2d2868;
     transition: 2s;
 }
 .image-container{
-    background-color: #597b85;
+    background-color: #4c4495;
     border-radius: 50%;
     height: 8em;
     width: 8em;
@@ -59,8 +59,8 @@ a{
     width: 6em;
 }
 .details{
-    background-color: #597b85;
-    border-bottom: 1px solid #466873;
+    background-color: #4c4495;
+    border-bottom: 1px solid #2d2868;
 }
 profile{
     /* position: fixed; */
