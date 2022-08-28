@@ -8,4 +8,5 @@ var profile ={
 allProfile.push(profile)
 localStorage.setItem("localallProfile",JSON.stringify(allProfile))
 console.log(profile)
+window.location.href = "dashboard/index.html"
 }
