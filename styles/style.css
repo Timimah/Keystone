@@ -1,5 +1,5 @@
 body{
-    height: 100vh
+    min-height: 20vh;
 }
 .header{
     display: inline-flex;
