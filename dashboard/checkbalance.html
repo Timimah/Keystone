@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styled.css">
 </head>
-<body  style="background-color: #597b85;">
+<body  style="background-color: #2d2868;">
     <div>
         <nav class="w-100 navbar navbar-colored" id="navBar">
             <ul class="nav">
@@ -62,6 +62,12 @@
                         <a href="withdraw.html" class="nav-link  text-light">Withdraw</a>
                     </li>
                     <li class="nav-item">
+                        <a href="deposit.html" class="nav-link  text-light">Deposit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="transaction-history.html" class="nav-link  text-light">Transactions History</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#get-statement" class="nav-link  text-light">Get Statement</a>
                     </li>
                     <li class="nav-item">
@@ -74,10 +80,16 @@
                     <div>
                         <p>Account Balance</p>
                     </div>
+
                     <div class="p-2 w-50 fs-4 mx-auto" style="background-color: #597b85;">
                         <input type="text" id="amountentered" placeholder="Enter deposit/transfer amount" style="width: 320px;">
                         <p id="disp"></p>
                         <div class="fs-5 justify-content-center mx-5 mt-3">
+
+                    <div class="p-2 w-50 fs-4 mx-auto">
+                        <p id="balance">$1000</p>
+                        <div class="fs-5 justify-content-center mx-5">
+
                             <ul class="d-flex" style="list-style-type: none;">
                                 <li style="margin-left: -50px;">
                                     <button href="http://" target="_blank" class="text-light btn" onclick="transfer()">
@@ -97,7 +109,7 @@
                             </ul>
                         </div>     
                     </div><br>
-                    <div class="transaction-history text-light p-3"  style="background-color: #243e48;">
+                    <div class="transaction-history text-light p-3"  style="background-color: #4c4495">
                         <p>You don't have any transactions yet</p><br>
                     </div>
                 </div>
