@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styled.css">
 </head>
-<body style="background-color: #597b85;">
+<body style="background-color: #2d2868;">
         <nav class="w-100 navbar navbar-colored" id="navBar">
             <ul class="nav">
                 <a href="" class="nav-link text-light">
@@ -41,24 +41,30 @@
         </nav>
         <div class="dashboard row w-100">
             <div class="dashboard-menu col-3 p-3">
-                <p class="dashboard-head">
+                <p class="dashboard-head text-light mx-3">
                     Hi,[username]
                 </p>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a href="/dashboard/index.html" class="nav-link  text-light">Profile</a>
+                        <a href="index.html" class="nav-link  text-light">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
+                        <a href="checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
+                        <a href="sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
+                        <a href="buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/dashboard/withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
+                        <a href="withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a href="deposit.html" class="nav-link  text-light">Deposit</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a href="transaction-history.html" class="nav-link  text-light">Transactions History</a>
                     </li>
                     <li class="nav-item">
                         <a href="#get-statement" class="nav-link  text-light">Get Statement</a>
@@ -69,9 +75,11 @@
                 </ul>
             </div>
             <div class="dashboard-transactions col-7 offset-4">
+                
                 <div class="form input-group-vertical w-100 p-5 send-money my-5">
+                    <p id="disp_message" class="text-light"></p>
                     <input class="form-control" type="number" name="" id="amount" placeholder="Amount" required><br>
-                    <select class="form-control" name="" id="" placeholder="select bank" required>
+                    <select class="form-control custom-select" name="" id="select-bank" placeholder="select bank" required>
                         <option value="Kuda Bank">Kuda Microfinance Bank</option>
                         <option value="Access bamk">Access Bank</option>
                         <option value="Wema Bank">Wema Bank</option>
@@ -79,10 +87,11 @@
                         <option value="GTB">Guarantee Trust Bank</option>
                         <option value="Polaris">Polaris Bank</option>
                     </select><br>
-                    <input class="form-control" type="number" name="" id="" placeholder="Account Number"><br>
-                    <input class="form-control" type="text" placeholder="Remark*" required><br>
-                    <button class="btn form-control w-25 text-light">Send</button>
+                    <input class="form-control" type="number" name="" id="acct-number" placeholder="Account Number"><br>
+                    <input class="form-control" id="remark" type="text" placeholder="Remark*" required><br>
+                    <button type="submit" class="btn form-control w-25 text-light" onclick="sendMoney()">Send</button>
                 </div>
+                    
             </div>
         </div>    
 </body>
