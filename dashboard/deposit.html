@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Balance</title>
+    <title>Send Money</title>
     <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styled.css">
 </head>
-<body  style="background-color: #2d2868;">
-    <div>
+<body style="background-color: #2d2868;">
         <nav class="w-100 navbar navbar-colored" id="navBar">
             <ul class="nav">
                 <a href="" class="nav-link text-light">
@@ -42,7 +41,7 @@
         </nav>
         <div class="dashboard row w-100">
             <div class="dashboard-menu col-3 p-3">
-                <p class="dashboard-head text-light mx-3">
+                <p class="dashboard-head">
                     Hi,[username]
                 </p>
                 <ul class="nav flex-column">
@@ -50,20 +49,20 @@
                         <a href="index.html" class="nav-link  text-light">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a href="checkbalance.html" class="nav-link  text-light">Check Balance</a>
+                        <a href="checkbalance.html" target="_self" class="nav-link text-light">Check Balance</a>
                     </li>
                     <li class="nav-item">
-                        <a href="sendmoney.html" class="nav-link  text-light"  text-light>Send Money</a>
+                        <a href="sendmoney.html" target="_self" class="nav-link text-light">Send Money</a>
                     </li>
                     <li class="nav-item">
-                        <a href="buyairtime.html" class="nav-link  text-light">Buy Airtime</a>
+                        <a href="buyairtime.html" target="_self" class="nav-link text-light">Buy Airtime</a>
                     </li>
                     <li class="nav-item">
-                        <a href="withdraw.html" class="nav-link  text-light">Withdraw</a>
+                        <a href="withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a href="deposit.html" class="nav-link  text-light">Deposit</a>
-                    </li> -->
+                    </li>
                     <li class="nav-item">
                         <a href="transaction-history.html" class="nav-link  text-light">Transactions History</a>
                     </li>
@@ -75,48 +74,24 @@
                     </li>
                 </ul>
             </div>
-            <div class="dashboard-transactions col-7 offset-4 my-5">
-                <div class="check-balance balance-card text-light text-center">
-                    <div>
-                        <p>Account Balance</p>
-                    </div>
-
-                    <div class="p-2 w-50 fs-4 mx-auto">
-                        <input type="text" id="amountentered" placeholder="Enter deposit/transfer amount" style="width: 320px;">
-                        <p id="disp"></p>
-                        <div class="fs-5 justify-content-center mx-5 mt-3">
-
-                    <div class="p-2 w-50 fs-4 mx-auto">
-                        <!-- <p id="balance">$1000</p> -->
-                        <div class="fs-5 justify-content-center mx-5">
-                            <ul class="d-flex btn-group" style="list-style-type: none;">
-                                <li style="margin-left: -180px;">
-                                    <button href="http://" target="_blank" class="text-light btn" onclick="transfer()">
-                                        Transfer
-                                    </button>
-                                </li>
-                                <li class="mx-2">
-                                        <button href="http://" target="_blank" class="text-light btn" style="width: 150px;" onclick="checkBalance()">
-                                                Check Balance
-                                        </button>
-                                    </li>
-                                <li class="ms-2">
-                                    <button href="http://" target="_blank" class="text-light btn" onclick="deposit()">
-                                            Deposit
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>     
-                    </div><br>
-                    <div class="transaction-history text-light p-3"  style="background-color: #4c4495">
-                        <p>You don't have any transactions yet</p><br>
-                    </div>
+            <div class="dashboard-transactions col-7 offset-4">
+                <div class="form input-group-vertical w-100 p-5 send-money my-5">
+                    <input class="form-control" type="number" name="" id="amount" placeholder="Amount" required><br>
+                    <select class="form-control" name="" id="" placeholder="select bank" required>
+                        <option value="Kuda Bank">Kuda Microfinance Bank</option>
+                        <option value="Access bamk">Access Bank</option>
+                        <option value="Wema Bank">Wema Bank</option>
+                        <option value="Zenith Bank">Zenith Bank</option>
+                        <option value="GTB">Guarantee Trust Bank</option>
+                        <option value="Polaris">Polaris Bank</option>
+                    </select><br>
+                    <input class="form-control" type="number" name="" id="" placeholder="Account Number"><br>
+                    <input class="form-control" type="text" placeholder="Remark*" required><br>
+                    <button class="btn form-control w-25 text-light">Send</button>
                 </div>
             </div>
-        </div>
-        </div>
-    </div>
+        </div>    
 </body>
 <script src="/script/dashboard.js"></script>
-<script src=".script/checkbalance.js"></script>
+<script src="/script/sendmoney.js"></script>
 </html>
