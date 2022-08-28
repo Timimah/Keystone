@@ -77,7 +77,7 @@
             <div class="dashboard-transactions col-7 offset-4">
                 <div class="form input-group-vertical w-100 p-5 send-money my-5">
                     <input class="form-control" type="number" name="" id="amount" placeholder="Amount" required><br>
-                    <select class="form-control" name="" id="" placeholder="select bank" required>
+                    <select class="form-control custom-select" name="" id="select-bank" placeholder="select bank" required>
                         <option value="Kuda Bank">Kuda Microfinance Bank</option>
                         <option value="Access bamk">Access Bank</option>
                         <option value="Wema Bank">Wema Bank</option>
@@ -85,9 +85,9 @@
                         <option value="GTB">Guarantee Trust Bank</option>
                         <option value="Polaris">Polaris Bank</option>
                     </select><br>
-                    <input class="form-control" type="number" name="" id="" placeholder="Account Number"><br>
-                    <input class="form-control" type="text" placeholder="Remark*" required><br>
-                    <button class="btn form-control w-25 text-light">Send</button>
+                    <input class="form-control" type="number" name="" id="acct-number" placeholder="Account Number"><br>
+                    <input class="form-control" id="remark" type="text" placeholder="Remark*" required><br>
+                    <button type="submit" class="btn form-control w-25 text-light" onclick="sendMoney()">Send</button>
                 </div>
             </div>
         </div>    
