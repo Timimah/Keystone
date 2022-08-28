@@ -1,12 +1,12 @@
-var balance = 1000
-parseFloat(balance)
+let balance = 1000
+balance = parseFloat(balance)
 function checkBalance(){
     var userDisp = disp.value
     disp.innerHTML = "<h1>Your balance is $" + balance + "</h1>"
     disp.value =""
 }
 function transfer(){
-    var amountEntered = amountentered.value
+    var amountEntered = parse(amountEntered.value)
     if(amountEntered>balance){
         // alert("Can't perform this operation")
         disp.innerHTML ="<h1> Can't perform this operation</h1>"
@@ -21,21 +21,21 @@ function transfer(){
         disp.innerHTML ="<h1>Enter a valid amount</h1>"
     }
     else {
-        balance = balance - amountEntered
-    disp.innerHTML = "<h1>Your transfer of $" +amountEntered +" is successful  and your new balance is" + " $" +balance+ "</h1>"
+        balance = balance - parseFloat(amountEntered)
+    disp.innerHTML = "<h1>Your transfer of $" + amountEntered +" is successful  and your new balance is" + " $" +balance+ "</h1>"
     // alert(`Your transfer of $${amountEntered} is successful and your new balance is $${balance} `)
     }
 }
 function deposit(){
 var amountEntered = amountentered.value
-if (amountEntered==0){
+if (amountEntered == 0){
     disp.innerHTML ="<h1> Can't perform this operation</h1>"
-}else if (amountEntered=="") {
+}else if (amountEntered == "") {
     disp.innerHTML ="<h1> Can't perform this operation</h1>"
-}else if (amountEntered<0){
+}else if (amountEntered < 0){
     disp.innerHTML ="<h1> Can't perform this operation</h1>"
 }else {
-    balance= balance+amountEntered
-    disp.innerHTML =`<h1>Your deposit of $${amountEntered} is successful and your new balance is $${balance}</h1>`
+    balance = balance + parseInt(amountEntered)
+    disp.innerHTML =`<h1>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${balance}</h1>`
 }
 }
