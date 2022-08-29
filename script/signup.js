@@ -42,7 +42,7 @@ submitDetails = () =>{
       userAddress: user_address.value,
       NextofKin: nok.value,
       NextofKinRel: selectedNok,
-      Phonenumber:phoneNumber.value,
+      PhoneNumber:phoneNumber.value,
       confirmPassword:userPassword.value,
       accountNumber: generated_acctno
     }
@@ -84,7 +84,7 @@ checkPassword = () =>{
   }
 }
 generateAcctNo = () =>{
-  generate_acctno = `01 ${Math.round(Math.random()* 10000000000)}`
+  generate_acctno = `01${Math.round(Math.random()* 100000000)}`
   generated_acctno = generate_acctno
   console.log(generate_acctno)
   console.log(generated_acctno)
