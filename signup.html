@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/5.0.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styled.css">
-    <link rel="stylesheet" href="/style/signup.css">
+    <link rel="stylesheet" href="/styles/signup.css">
 </head>
 <style>
     body{
@@ -33,37 +33,29 @@
                 <option value="USA">US +1</option> 
                 <option value="Canada">C +1</option> 
             </select>
-        <input class="form-group  form-control" type="number" placeholder="Phone number" class="btn btn-outline-info" id="phoneNumber" maxlength="4">
+            <input class="form-group  form-control" type="text/number" placeholder="Phone number" class="btn btn-outline-info" id="phoneNumber" maxlength="11">
         </div><br>
-   <input class="form-control text-center" type="text" placeholder="First Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="first_name"><br>
-   <input class="form-control text-center" type="text" placeholder="Middle Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="middle_name"><br>
-   <input class="form-control text-center" type="text" placeholder="Last Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="last_name"><br>
-   <input class="form-control text-center" type="text" placeholder="Address" class="btn btn-outline-info" style="border-radius: 100rem;" id="middle_name"><br>
-
-    <input class="form-control text-center" type="text" placeholder="Next of Kin" class="btn btn-outline-info" style="border-radius: 100rem;" id="first_name"><br>
-   <input class="form-control text-center" type="text" placeholder="Relationship" class="btn btn-outline-info" style="border-radius: 100rem;" id="middle_name"><br>
-    <input class="form-control text-center" type="password" placeholder=" userpassword" class="btn btn-outline-info" style="border-radius: 100rem;" id="userPassword"><br>
-    <input class="form-control  text-center" type="password" placeholder="Confirm password" class=" btn btn-outline-info" style="border-radius: 100rem;" id="confirmPassword"><br>
-    <div id="box" class=" py-3">
+        <input class="form-control text-center" type="text" placeholder="First Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="first_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Middle Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="middle_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Last Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="last_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Address" class="btn btn-outline-info" style="border-radius: 100rem;" id="user_address"><br>
+        <div class="input-group">
+            <input class="form-control text-center" type="text" placeholder="Next of Kin" class="btn btn-outline-info" style="border-radius: 100rem;" id="nok">&nbsp;
+            <select class="form-select text-center" id="nok_rel" style="border-radius: 100rem;">
+                <option class="bg-dark text-light" value="Father">Father</option>
+                <option class="bg-dark text-light" value="Mother">Mother</option>
+                <option class="bg-dark text-light" value="Brother">Brother</option>
+                <option class="bg-dark text-light" value="Sister">Sister</option>
+                <option class="bg-dark text-light" value="Wife">Wife</option>
+                <option class="bg-dark text-light" value="Daughter">Daughter</option>
+                <option class="bg-dark text-light" value="Son">Son</option>
+            </select>
+        </div><br>
+        <input class="form-control text-center" type="password" placeholder="Password" class="btn btn-outline-info" style="border-radius: 100rem;" id="userPassword" maxlength="10"><br>
+        <input class="form-control  text-center" type="password" placeholder="Confirm password" class=" btn btn-outline-info" style="border-radius: 100rem;" id="confirmPassword" maxlength="10"><br>
+        <button class="btn w-50 text-light" type="submit" style="border-radius: 100rem;" onclick="submitDetails()">Sign Up</button>
+        <p class="text-light">Have an account? <a href="signin.html">Sign In</a></p>
     </center>
-        <!-- <h4 style="color: white; font-size: 30px; font-weight: bold;">Login Assistance</h4>   
-       <h6 class="mx-3 text-light">if you forgot your password,please fill in the details below:</h6>
-       <div id="box2">
-           <p class="text-light">Tap to select mobile country code:</p>
-            <select name="" id="countryCode" style="height: 37px; width: 15%;  color: #2D2867; " class="btn btn-light"  >
-                
-               <option value="nigeria">NG +234</option>   
-          </select>
-       <input type="text" placeholder="Phone number" class="btn btn-outline-light rounded-pill" style="width:40%;" id="phoneNumber"><br><br>
-       <input type="text" placeholder=" userpassword" class="btn btn-outline-light" style="width: 60%; border-radius: 100rem;" id="userPassword"><br><br>
-       <input type="text" placeholder="Confirm password" class=" btn btn-outline-light" style="width:60%; border-radius: 100rem;" id="confirmPassword"><br><br>
-       </div>
-       <button onclick="Submit()" class="btn btn-light" style="width: 40%; border-radius: 100rem; " > <a href="signin.html" style="color: white;"> Submit</a></button>
-       </div>
-    </div>
-</div>
-<button onclick="Submit()" class="btn btn-info w-25" style=" border-radius: 100rem; margin-left: 90px;" > <a href="signin.html" style="color: white;"> Submit</a></button>
-</div> -->
    <script src="/script/signup.js"></script>
 </body>
 </html>
