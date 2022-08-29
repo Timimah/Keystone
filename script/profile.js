@@ -1,48 +1,66 @@
-let userName = document.getElementById("user_name0").value
-let userAddress = document.getElementById("user_address0").value
-let userNumber = document.getElementById("user_number0").value
-let userNok = document.getElementById("user_nok0").value
-let userNokRel1 = document.getElementById("user_nokrel1").value
+let userName = document.getElementById("user_name0")
+let userAddress = document.getElementById("user_address0")
+let userNumber = document.getElementById("user_number0")
+let userNok = document.getElementById("user_nok0")
+let userNokRel1 = document.getElementById("user_nokrel1")
 editProfile = ()=>{
     user_profile.style.display = "none"
     edit_Details.style.display = "block"
 }
 editedProfile = ()=>{
-    // if(document.getElementById("user_name0").value == ""){
-    //     alert()
-    //     document.getElementById("user_name").innerText = document.getElementById("user_name").innerText
-    // }
-    // else if(document.getElementById("user_address0").value == ""){
-    //     userAddress = document.getElementById("user_address").innerText
-    //     document.getElementById("user_address").innerText = userAddress
-    // }
-    // else if(userNumber == ""){
-    //     userNumber = document.getElementById("user_number").innerText
-    //     document.getElementById("user_number").innerText = userNumber
-    // }
-    // else if( userNok == ""){
-    //     userNok = document.getElementById("user_nok").innerText
-    //     document.getElementById("user_nok").innerText = userNok
-    // }
-    // else if(userNokRel1 == ""){
-    //     userNokRel1 = document.getElementById("user_nokrel").innerText
-    //     document.getElementById("user_nokrel").innerText = userNokRel1
-    // }
-    // else{
-        userName = document.getElementById("user_name0").value
+    if(userName.value == ""){
+        alert("Empty")
+        userName = document.getElementById("user_name").innerText
         document.getElementById("user_name").innerText = userName
-        userAddress = document.getElementById("user_address0").value
+    }
+    else{
+        userName = userName.value
+        document.getElementById("user_name").innerText = userName
+    }
+    if(userAddress.value == ""){
+        alert("u empty")
+        userAddress = document.getElementById("user_address").innerText
         document.getElementById("user_address").innerText = userAddress
-        userNumber = document.getElementById("user_number0").value
+    }
+    else{
+        userAddress = userAddress.value
+        document.getElementById("user_address").innerText = userAddress
+    }
+    if(userNumber.value == ""){
+        alert("v empty")
+        userNumber = document.getElementById("user_number").innerText
         document.getElementById("user_number").innerText = userNumber
-        userNok = document.getElementById("user_nok0").value
+    }
+    else{
+        userNumber = userNumber.value
+        document.getElementById("user_number").innerText = userNumber
+    }
+    if(userNok.value == ""){
+        alert("Nok empty")
+        userNok = document.getElementById("user_nok").innerText
         document.getElementById("user_nok").innerText = userNok
-        userNokRel1 = document.getElementById("user_nokrel1").value
-        document.getElementById("user_nokrel").innerText = userNokRel1
-    // }
+    }
+    else{
+        userNok = userNok.value
+        document.getElementById("user_nok").innerText = userNok
+    }
+    if(userNokRel1.value == ""){
+        alert("Nokrel1 empty")
+        userNokRel1 = document.getElementById("user_nokrel1").innerText
+        document.getElementById("user_nokrel1").innerText = userNokRel1
+    }
+    else{
+        userNokRel1 = userNokRel1.value
+        document.getElementById("user_nokrel1").innerText = userNokRel1
+    }    
     update_profile_success.style.display = "flex"
     user_profile.style.display = "block"
     edit_Details.style.display = "none"
+    userName.value = ""
+    userAddress.value = ""
+    userNumber.value = ""
+    userNok.value = ""
+    userNokRel1.value = ""
 }
 closeDiv = ()=>{
     update_profile_success.style.display = "none"
