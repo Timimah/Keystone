@@ -28,12 +28,12 @@
                     <a href="" class="nav-link text-light">Contact</a>
                 </li>
                 <li class="nav-item h-25" style="margin-left: 150px;margin-top: 10px;">
-                    <a href="" class="nav-link text-light btn">
+                    <a href="/signin.html" class="nav-link text-light btn">
                        Log In
                     </a>
                 </li>
                 <li class="nav-item h-25" style="margin-left: 10px; margin-top: 10px;">
-                    <a href="" class="nav-link btn text-light">
+                    <a href="/signup.html" class="nav-link btn text-light">
                         Sign up
                     </a>
                 </li>
@@ -41,7 +41,7 @@
         </nav>
         <div class="dashboard row w-100">
             <div class="dashboard-menu col-3 p-3">
-                <p class="dashboard-head">
+                <p class="dashboard-head text-light mx-3">
                     Hi,[username]
                 </p>
                 <ul class="nav flex-column">
@@ -60,9 +60,9 @@
                     <li class="nav-item">
                         <a href="withdraw.html" target="_self" class="nav-link text-light">Withdraw</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a href="deposit.html" class="nav-link  text-light">Deposit</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a href="transaction-history.html" class="nav-link  text-light">Transactions History</a>
                     </li>
@@ -75,7 +75,9 @@
                 </ul>
             </div>
             <div class="dashboard-transactions col-7 offset-4">
+                
                 <div class="form input-group-vertical w-100 p-5 send-money my-5">
+                    <p id="disp_message" class="text-light"></p>
                     <input class="form-control" type="number" name="" id="amount" placeholder="Amount" required><br>
                     <select class="form-control custom-select" name="" id="select-bank" placeholder="select bank" required>
                         <option value="Kuda Bank">Kuda Microfinance Bank</option>
@@ -89,6 +91,7 @@
                     <input class="form-control" id="remark" type="text" placeholder="Remark*" required><br>
                     <button type="submit" class="btn form-control w-25 text-light" onclick="sendMoney()">Send</button>
                 </div>
+                    
             </div>
         </div>    
 </body>

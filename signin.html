@@ -11,20 +11,62 @@
     <link rel="stylesheet" href="/styles/styled.css">
     <link rel="stylesheet" href="/styles/signin.css">
 </head>
-<body>
-  <div id="box" class="shadow " >
-<h3 class="mx-3 py-2">sign in</h3>
-<div id="box2">
-<label for="">Phone number</label><br>
-<input type="text" class="btn btn-outline-info" style="width:80% ;" id="phoneNumber" ><br><br>
-<label for="">password</label><br>
-<input type="text" class="btn btn-outline-info" style="width:80% ; " id="userPassword"><br><br>
+<style>
+  body{
+      background-image: url(/images/vecteezy_modern-wavy-lines-abstract-background-dark-blue-gradient_6395905.jpg);
+      background-size: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+ </style>
+<body style="background-color: #2d2868;">
+  <div class="header w-100">
+    <nav class="navbar navbar-colored" id="navBar">
+        <ul class="nav">
+            <a href="" class="nav-link text-light">
+                    <img src="/images/keystone logo.png" alt="" width="8%" style="margin-top: -18px;margin-left: 50px;">
+                    <h2 class="nav-brand" style="margin-top: -75px;margin-left: 135px;">KEYSTONE </h2>
+            </a>
+            <li class="nav-item h-25" style="margin-left: 500px;margin-top: -55px;">
+                <a href="" class="nav-link text-light">Features</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 50px;margin-top: -55px;">
+                <a href="" class="nav-link text-light">Pricing</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 50px;margin-top: -55px;">
+                <a href="" class="nav-link text-light">Blog</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 50px;margin-top: -55px;">
+                <a href="" class="nav-link text-light">Contact</a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 150px;margin-top: -55px;">
+                <a href="signin.html" target="_self" class="nav-link text-light btn">
+                   Log In
+                </a>
+            </li>
+            <li class="nav-item h-25" style="margin-left: 10px; margin-top: -55px;">
+                <a href="signup.html" target="_self" class="nav-link btn text-light">
+                    Sign up
+                </a>
+            </li>
+        </ul>
+    </nav>
 </div>
-<button onclick="signIn()" style="border-radius:20rem;width:300px; margin-left: 50px;" class="btn btn-info my-3">sign in</button>
-
-<h6 style="margin-left:300px ; color: skyblue;"> <a href="password.html" style="color:skyblue ;"> forgot password?</a></h6>
- <h6 style="margin-top: -25px; margin-left:10px;color:cadetblue">signup</h6>
-</div>  
+  <center>
+    <div id="box" class="col-sm-1 col-md-12 col-lg-9 py-5" >
+      <h3 class="mx-3 py-2" style="font-family: sans-serif; font-size: 30px; font-weight: bold; color: white;">SIGN IN</h3>
+      <div id="box2" class="">
+      <label for="" style="color: white;">Phone number</label><br>
+      <input type="text" class="btn btn-outline-light shadow-sm text-center rounded-pill shadow-sm text-center  " style="width: 100% ;" id="phoneNumber" placeholder="Phone number"><br><br>
+      <label for="" style="color: white;">password</label><br>
+      <input type="text" class="btn btn-outline-light shadow-sm text-center  rounded-pill " style="width:100% ; " id="userPassword" placeholder="password"><br><br>
+      </div>
+    
+      <span class="d-flex flex-row bd-highlight mb-3"><button class="btn-primary ms-2">√</button><a href="password.html" style="color: white;"> forgot password?</a></span><span class=" ps-2 d-flex flex-row-reverse bd-highlight" style="color: white; "><a href="/signup.html">signup</a>Don't have an account?</span>
+      <button onclick="signIn()" style="border-radius:20rem;width:300px;" class="btn btn-light my-3">sign in</button>
+      
+      </div>  
+  </center>
 </body>
 <script src="/script/signin.js"></script>
 </html>
