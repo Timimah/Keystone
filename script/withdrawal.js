@@ -18,7 +18,6 @@ var balance = 1000
 function withdraw(){
     userPassword=user_password.value
     amountEntered=amountentered.value
-    balance = balance - amountEntered
     if(userPassword!=8879){
     alert("Incorrect password")
     }else if (amountEntered>balance){
@@ -28,6 +27,7 @@ function withdraw(){
     }else if  (amountEntered==""){
         alert("Input an amount")
     }else{
+        balance = balance - amountEntered
         alert("Your withdrawal of $"+amountEntered +" was successful and your new balance is $"+balance)
     } 
 }
