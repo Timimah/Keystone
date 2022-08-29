@@ -1,4 +1,4 @@
-{passwordProfile=JSON.parse(localStorage.getItem("localpasswordProfile"))}
+let password_Profile = JSON.parse(localStorage.getItem("localpasswordProfile"))
 var passwordProfile =[]
 function Submit(){
 var  profile ={
@@ -11,8 +11,8 @@ userPassword.value =""
 confirmPassword.value =""
 passwordProfile.push(profile)
 
-localStorage.setItem("localpasswordProfile",JSON.stringify(passwordProfile))
-console.log(profile)
+localStorage.setItem("localpasswordProfile",JSON.stringify(password_Profile))
+console.log(passwordProfile)
 }
 
 var  allCode =[]
