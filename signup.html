@@ -19,6 +19,9 @@
         /* background-repeat: no-repeat; */
         background-size: cover;
     }
+    input{
+        background-color: transparent;
+    }
    </style>
 <body>
     <center>
@@ -35,12 +38,12 @@
             </select>
             <input class="form-group  form-control" type="text/number" placeholder="Phone number" class="btn btn-outline-info" id="phoneNumber" maxlength="11">
         </div><br>
-        <input class="form-control text-center" type="text" placeholder="First Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="first_name"><br>
-        <input class="form-control text-center" type="text" placeholder="Middle Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="middle_name"><br>
-        <input class="form-control text-center" type="text" placeholder="Last Name" class="btn btn-outline-info" style="border-radius: 100rem;" id="last_name"><br>
-        <input class="form-control text-center" type="text" placeholder="Address" class="btn btn-outline-info" style="border-radius: 100rem;" id="user_address"><br>
+        <input class="form-control text-center" type="text" placeholder="First Name" style="border-radius: 100rem;" id="first_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Middle Name" style="border-radius: 100rem;" id="middle_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Last Name" style="border-radius: 100rem;" id="last_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Address" style="border-radius: 100rem;" id="user_address"><br>
         <div class="input-group">
-            <input class="form-control text-center" type="text" placeholder="Next of Kin" class="btn btn-outline-info" style="border-radius: 100rem;" id="nok">&nbsp;
+            <input class="form-control text-center" type="text" placeholder="Next of Kin" style="border-radius: 100rem;" id="nok">&nbsp;
             <select class="form-select text-center" id="nok_rel" style="border-radius: 100rem;">
                 <option class="bg-dark text-light" value="Father">Father</option>
                 <option class="bg-dark text-light" value="Mother">Mother</option>
@@ -51,7 +54,7 @@
                 <option class="bg-dark text-light" value="Son">Son</option>
             </select>
         </div><br>
-        <input class="form-control text-center" type="password" placeholder="Password" class="btn btn-outline-info" style="border-radius: 100rem;" id="userPassword" maxlength="10"><br>
+        <input class="form-control text-center" type="password" placeholder="Password" style="border-radius: 100rem;" id="userPassword" maxlength="10"><br>
         <input class="form-control  text-center" type="password" placeholder="Confirm password" class=" btn btn-outline-info" style="border-radius: 100rem;" id="confirmPassword" maxlength="10" onchange="checkPassword()"><br>
         <button class="btn w-50 text-light" type="submit" style="border-radius: 100rem;" onclick="submitDetails()">Sign Up</button>
         <p class="text-light">Have an account? <a href="signin.html">Sign In</a></p>
