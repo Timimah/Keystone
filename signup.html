@@ -14,9 +14,9 @@
 </head>
 <style>
     body{
-       background-color: #2D2867;
+       background: linear-gradient(rgba(45, 40, 103, 0.8), rgba(45, 40, 103, 1)), url(images/KEY\ STONE.jpg);
         background-size: fixed;
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
         background-size: cover;
     }
    </style>
@@ -28,8 +28,8 @@
     <div class="form">
         <p class="text-light">Tap to select mobile country code:</p>
         <div class="input-group">
-            <select id="countryCode" style="height: 37px; width: 1%;  color: white;" class="btn btn-info form-group form-control ">
-                <option value="nigeria">NG +234</option>   
+            <select id="countryCode" style="height: 37px; width: 1%;  color: white; background-color: #4c4495;" class="btn form-group form-control ">
+                <option value="Nigeria">NG +234</option>   
                 <option value="USA">US +1</option> 
                 <option value="Canada">C +1</option> 
             </select>
@@ -52,7 +52,7 @@
             </select>
         </div><br>
         <input class="form-control text-center" type="password" placeholder="Password" class="btn btn-outline-info" style="border-radius: 100rem;" id="userPassword" maxlength="10"><br>
-        <input class="form-control  text-center" type="password" placeholder="Confirm password" class=" btn btn-outline-info" style="border-radius: 100rem;" id="confirmPassword" maxlength="10"><br>
+        <input class="form-control  text-center" type="password" placeholder="Confirm password" class=" btn btn-outline-info" style="border-radius: 100rem;" id="confirmPassword" maxlength="10" onchange="checkPassword()"><br>
         <button class="btn w-50 text-light" type="submit" style="border-radius: 100rem;" onclick="submitDetails()">Sign Up</button>
         <p class="text-light">Have an account? <a href="signin.html">Sign In</a></p>
     </center>
