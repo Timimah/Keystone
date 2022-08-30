@@ -20,6 +20,8 @@ transfer = () =>{
     else {
         balance = balance - parseFloat(amountEntered)
     disp.innerHTML = `<h3>Your transfer of $ ${amountEntered} is successful and your new balance is $ ${balance} </h3>`
+    tHistory.innerHTML=""
+    tHistory.innerHTML = `<h3> You have successfully transferred $ ${amountEntered}</h3>`
     }
     document.getElementById("amountentered").value = ``
 }
