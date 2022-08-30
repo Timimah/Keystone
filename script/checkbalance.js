@@ -1,3 +1,5 @@
+let date = new Date()
+let currentTime = date.toLocaleString()
 let storeHistory = []
 let message 
 if (localStorage.transHist){
@@ -5,11 +7,11 @@ if (localStorage.transHist){
 }
 let balance = 1000
 balance = parseFloat(balance)
-disp.innerHTML = `$${balance}`
+// disp.innerHTML = `$${balance}`
 checkBalance = () =>{
     disp.innerHTML = ""
     disp.innerHTML += `</br><h3>Your current balance is $ ${balance} </h3>`
-    disp.value = ``
+    disp.value = ""
 }
 deposit = () =>{
 var amountEntered = document.getElementById("amountentered").value
@@ -23,7 +25,7 @@ if (amountEntered == 0){
     balance = balance + parseInt(amountEntered)
     disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${balance} </h3>`
     tHistory.innerHTML=""
-    tHistory.innerText = `You have deposited $${amountEntered}  on `
+    tHistory.innerText = `You have deposited $${amountEntered}  on ${currentTime} `
     message = tHistory.innerText
     console.log(message)
     let newTransaction = {
