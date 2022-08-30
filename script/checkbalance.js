@@ -1,3 +1,8 @@
+let storeHistory = []
+let message 
+if (localStorage.transHist){
+    store_History=JSON.parse(localStorage.getItem("transHist"))
+}
 let balance = 1000
 balance = parseFloat(balance)
 disp.innerHTML = `$${balance}`
@@ -38,6 +43,15 @@ if (amountEntered == 0){
     balance = balance + parseInt(amountEntered)
     disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${balance} </h3>`
     tHistory.innerHTML=""
-    tHistory.innerHTML = `<h3> You have successfully deposited $ ${amountEntered}</h3>`
+    tHistory.innerText = `You have deposited $${amountEntered}  on `
+    message = tHistory.innerText
+    console.log(message)
+    let newTransaction = {
+        transactionMessage: message
+    }
+    storeHistory.push(newTransaction)
+    console.log(newTransaction)
+    console.log(storeHistory);
+    localStorage.setItem("transHist",JSON.stringify(storeHistory))
 }
 }
