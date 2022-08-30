@@ -24,6 +24,7 @@ checkBalance = () =>{
 //     tHistory.innerHTML = `<h3> You have successfully transferred $ ${amountEntered}</h3>`
 //     }
 //     document.getElementById("amountentered").value = ``
+        // /^([+2340])([\d]{10,13})$/
 // }
 deposit = () =>{
 var amountEntered = document.getElementById("amountentered").value
