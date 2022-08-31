@@ -24,7 +24,7 @@ function withdraw(){
     userPassword=user_password.value
     amountEntered=amountentered.value
     if(userPassword!=8879){
-    alert("Incorrect password")
+    alert("Incorrect Pin")
     }else if (amountEntered>balance){
         alert("Insufficient fund")
     }else if (amountEntered==0){
