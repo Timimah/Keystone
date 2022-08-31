@@ -1,3 +1,4 @@
+required_div.style.visibility = "hidden"
 let profile
 let pin
 let generated_pin
@@ -19,28 +20,8 @@ let generatePin = () =>{
 
 let submitDetails = () =>{
   if (first_name.value == "" || middle_name.value == "" || last_name.value == "" || user_address.value == "" || userPassword.value == "" || phoneNumber.value == "" || nok.value == ""){
-    alert("All fields are required")
-    if (first_name.value == "") {
-        first_name.focus()
-    }
-    else if (middle_name.value == ""){
-        middle_name.focus()
-    }
-    else if (last_name.value == ""){
-        last_name.focus()
-    }
-    else if (user_address.value == ""){
-        user_address.focus()
-    }
-    else if (userPassword.value == ""){
-        userPassword.focus()
-    }
-    else if(phoneNumber.value == ""){
-      phoneNumber.focus()
-    }
-    else if(nok.value == ""){
-      nok.focus()
-    }
+    required_div.style.visibility = "visible"
+    phoneNumber.focus()
 }
   else{
     generateAcctNo()
@@ -64,10 +45,9 @@ let submitDetails = () =>{
     }
 signupProfile.push(profile)
 localStorage.setItem("user_profile",JSON.stringify(signupProfile))
-alert(`You have successfully signed up. You can now log in with your phone number or your account number(${profile.accountNumber}). Your UTP (Unique Transaaction Pin) is ${profile.pinNumber}`)
-// window.location.href = "signin.html"
-  }
-
+(`You have successfully signed up. You can now log in with your phone number or your account number(${profile.accountNumber}). Your UTP (Unique Transaaction Pin) is ${profile.pinNumber}`)
+window.location.href = "signin.html"
+}
 
 first_name.value = ""
 middle_name.value = ""
@@ -79,24 +59,4 @@ phoneNumber.value = ""
 userPassword.value = ""
 confirmPassword.value = ""
 console.log(signupProfile)
-}
-let checkPassword = () =>{
-  if(userPassword.value == confirmPassword.value){
-    alert("password is correct")
-  
-  }
-  else if(confirmPassword.value != userPassword.value){
-    alert("password is incorrect")
-    confirmPassword.focus()
-  }
-  else{
-    submitDetails()
-  }
-}
-
-generateAcctNo = () =>{
-  generate_acctno = `01${Math.round(Math.random()* 100000000)}`
-  generated_acctno = generate_acctno
-  console.log(generate_acctno)
-  console.log(generated_acctno)
 }
