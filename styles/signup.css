@@ -1,11 +1,10 @@
-/* #box{
-    
-    width:40%;
-    height:400px ;
-    margin:auto
-} */
-
-/* #box2{
-    margin-left: 50px;
-
-} */
+body{
+    background: linear-gradient(rgba(45, 40, 103, 0.8), rgba(45, 40, 103, 1)), url(/images/KEY\ STONE.jpg);
+     background-size: fixed;
+     /* background-repeat: no-repeat; */
+     background-size: cover;
+ }
+ 
+ input:hover{
+    background-color: #423b82!important;
+ }
