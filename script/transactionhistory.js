@@ -6,5 +6,6 @@ if (localStorage.transHist){
     // historyMessage.innerHTML = `<p> ${store_History}</p>`
     storedHistory.map((item) => {
         historyMessage.innerHTML += `<p> ${item.transactionMessage} ${currentTime}</p>`
+        historyMessage.innerHTML += `<p> ${item.transactionMessage2} ${currentTime}</p>`
     })
 }

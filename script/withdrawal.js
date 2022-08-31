@@ -1,3 +1,8 @@
+let storeHistory = []
+let message
+if (localStorage.transHist){
+    storeHistory=JSON.parse(localStorage.getItem("transHist"))
+}
 var balance = 1000
 // function withdraw(){
 //     userPassword=user_password.value
@@ -29,5 +34,26 @@ function withdraw(){
     }else{
         balance = balance - amountEntered
         alert("Your withdrawal of $"+amountEntered +" was successful and your new balance is $"+balance)
+        tHistory.innerText = `You have transferred $${amountEntered}  on `
+        message = tHistory.innerText
+        let newTransaction2 = {
+            transactionMessage2: message
+        }
+        storeHistory.push(newTransaction2)
+    console.log(newTransaction2)
+    console.log(storeHistory);
+    localStorage.setItem("transHist",JSON.stringify(storeHistory))
     } 
 }
+// tHistory.innerText = `You have deposited $${amountEntered}  on `
+//     message = tHistory.innerText
+//     console.log(message)
+//     let newTransaction = {
+//         transactionMessage: message
+//     }
+//     storeHistory.push(newTransaction)
+//     console.log(newTransaction)
+//     console.log(storeHistory);
+//     localStorage.setItem("transHist",JSON.stringify(storeHistory))
+// }
+// }
