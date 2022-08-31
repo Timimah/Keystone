@@ -1,10 +1,14 @@
+/* *{
+    border: 1px solid red;
+} */
 body{
     min-height: 20vh;
+   
 }
 .header{
-    display: inline-flex;
+
     list-style: none;
-    height: 1in;
+    /* height: 1in; */
     /* width: 100%; */
 }
 .body{
@@ -15,3 +19,21 @@ body{
     border: 2px solid white;
     border-radius: 20px;
 }
+#cds{
+    float: right !important; 
+}
+li {
+    list-style-type: none;
+}
+@media all and (max-width:1100px){
+    .cse{
+  display: none;
+  visibility: hidden;
+  background: none;
+    }
+    .cs{
+        display: none;
+        visibility: hidden;
+        background: none;
+      }
+    }

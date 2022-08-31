@@ -1,8 +1,16 @@
+if(localStorage.user_profile){
+    signupProfile = JSON.parse(localStorage.getItem("user_profile"))
+  }
 let userName = document.getElementById("user_name0")
 let userAddress = document.getElementById("user_address0")
 let userNumber = document.getElementById("user_number0")
 let userNok = document.getElementById("user_nok0")
 let userNokRel1 = document.getElementById("user_nokrel1")
+
+
+
+
+
 editProfile = ()=>{
     user_profile.style.display = "none"
     edit_Details.style.display = "block"
