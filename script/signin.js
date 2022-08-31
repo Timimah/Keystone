@@ -1,3 +1,4 @@
+required_div.style.display  = "none"
 let signupProfile = JSON.parse(localStorage.getItem("user_profile"))
 let found = false
 signIn = () =>{
@@ -16,11 +17,14 @@ signIn = () =>{
     userPassword.placeholder = "Please input a valid value"
     }
     if(found == true){
-        alert("You have been successfully logged in")
+        required_div.style.display  = "block"
+        signed_in.innerTEXT = `You have successfully logged in`
         window.location.href = "/dashboard/index.html"
     }
     else if(found == false){
-        alert("Invalid!!")
+        required_div.style.display  = "block"
+        signed_in.inner = `Invalid!!`
+        // alert(signed_in.innerTEXT)
         acctPNumber.value = ""
         userPassword.value = ""
         acctPNumber.focus()
