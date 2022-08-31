@@ -1,5 +1,5 @@
 let storeHistory = []
-let message
+let message2
 if (localStorage.transHist){
     storeHistory=JSON.parse(localStorage.getItem("transHist"))
 }
@@ -33,11 +33,13 @@ function withdraw(){
         alert("Input an amount")
     }else{
         balance = balance - amountEntered
-        alert("Your withdrawal of $"+amountEntered +" was successful and your new balance is $"+balance)
-        tHistory.innerText = `You have transferred $${amountEntered}  on `
-        message = tHistory.innerText
+        tTransfer.innerText = `Your withdrawal of $${amountEntered} was successful and your new balance is $${balance}`
+        // tTransfer=""
+        // tTransfer.innerText = `You have transferred $${amountEntered}  on `
+        message2 = tTransfer.innerText
+        console.log(message2)
         let newTransaction2 = {
-            transactionMessage2: message
+            transactionMessage2: message2
         }
         storeHistory.push(newTransaction2)
     console.log(newTransaction2)
