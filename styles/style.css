@@ -1,6 +1,6 @@
-*{
+/* *{
     border: 1px solid red;
-}
+} */
 body{
     min-height: 20vh;
    
@@ -25,3 +25,15 @@ body{
 li {
     list-style-type: none;
 }
+@media all and (max-width:1100px){
+    .cse{
+  display: none;
+  visibility: hidden;
+  background: none;
+    }
+    .cs{
+        display: none;
+        visibility: hidden;
+        background: none;
+      }
+    }
