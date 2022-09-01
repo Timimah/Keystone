@@ -1,9 +1,11 @@
-let storeHistory = []
+// let storeHistory = []
+let da = new Date()
+let cuTime = da.toLocaleString()
 let message2
 if (localStorage.transHist){
     storeHistory=JSON.parse(localStorage.getItem("transHist"))
 }
-var balance = 1000
+// var balance = 1000
 // function withdraw(){
 //     userPassword=user_password.value
 //     if(amountEntered==0){
@@ -23,6 +25,7 @@ var balance = 1000
 function withdraw(){
     userPassword=user_password.value
     amountEntered=amountentered.value
+    balance = 1000
     if(userPassword!=8879){
     alert("Incorrect Pin")
     }else if (amountEntered>balance){
@@ -33,19 +36,13 @@ function withdraw(){
         alert("Input an amount")
     }else{
         balance = balance - amountEntered
-        tTransfer.innerText = `Your withdrawal of $${amountEntered} was successful and your new balance is $${balance}`
-        // tTransfer=""
-        // tTransfer.innerText = `You have transferred $${amountEntered}  on `
-        message2 = tTransfer.innerText
-        console.log(message2)
-        let newTransaction2 = {
-            transactionMessage2: message2
+        withdrawMessage.innerHTML =`Your withdrawal of $${amountEntered} on ${cuTime} is successful and your new balance is $${balance}`
+        let withdraw_m= {
+            transactionMessage2: `You withdraw $${amountEntered} on ${cuTime}`
         }
-        storeHistory.push(newTransaction2)
-    console.log(newTransaction2)
-    console.log(storeHistory);
-    localStorage.setItem("transHist",JSON.stringify(storeHistory))
-    } 
+        storeHistory.push(withdraw_m)
+        localStorage.setItem("transHist",JSON.stringify(storeHistory))
+    }    
 }
 // tHistory.innerText = `You have deposited $${amountEntered}  on `
 //     message = tHistory.innerText

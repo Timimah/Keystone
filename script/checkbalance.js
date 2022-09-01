@@ -3,9 +3,10 @@ let currentTime = date.toLocaleString()
 let storeHistory = []
 let message 
 if (localStorage.transHist){
-    storeHistory=JSON.parse(localStorage.getItem("transHist"))
+    storeHistory =JSON.parse(localStorage.getItem("transHist"))
 }
 let balance = 1000
+let updatedUserBalance 
 balance = parseFloat(balance)
 // disp.innerHTML = `$${balance}`
 checkBalance = () =>{
@@ -24,16 +25,12 @@ if (amountEntered == 0){
 }else {
     balance = balance + parseInt(amountEntered)
     disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${balance} </h3>`
-    tHistory.innerHTML=""
+    tHistory.innerHTML="" 
     tHistory.innerText = `You have deposited $${amountEntered}  on ${currentTime} `
-    message = tHistory.innerText
-    console.log(message)
-    let newTransaction = {
-        transactionMessage: message
+    let deposit_m = {
+        transactionMessage: `Your deposit of $${amountEntered} on ${currentTime} was successful`
     }
-    storeHistory.push(newTransaction)
-    console.log(newTransaction)
-    console.log(storeHistory);
+    storeHistory.push(deposit_m)
     localStorage.setItem("transHist",JSON.stringify(storeHistory))
 }
 }

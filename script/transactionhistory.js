@@ -1,14 +1,18 @@
-let date = new Date()
-let currentTime = date.toLocaleString()
-let storedHistory 
+ let storedHistory 
 if (localStorage.transHist){
     storedHistory = JSON.parse(localStorage.getItem("transHist"))
-    // historyMessage.innerHTML = `<p> ${store_History}</p>`
+}
     storedHistory.map((item) => {
-        historyMessage.innerHTML += `<p> ${item.transactionMessage} ${currentTime}</p>`
-        historyMessage.innerHTML += `<p> ${item.transactionMessage2} ${currentTime}</p>`
+        if(userT_history==undefined){
+            userT_history.innerHTML=""
+        }else{
+        userT_history.innerHTML += `${item.transactionMessage}</br> ${item.transactionMessage2}</br>`
+        }
     })
     // storedHistory.map((item) => {
-    //     
+        // if (userT_history1==undefined){
+        //     alert(userT_history1.innerHTML)
+        // }else{
+        // userT_history.innerHTML += `${item.transactionMessage2}</br>`
+        // }
     // })
-}
