@@ -22,11 +22,16 @@
 <body style="height: 100vh;">
   <center>
     <div id="box" class="col-sm-10 col-md-10 col-lg-5 py-3 text-center">
-      
+      <div class="p-2 text-light mx-5 my-2" style="background-color: #4c4495" id="required_div">
+        <span class="col-10" id="signed_in">
+          All fields are required
+        </span>
+        <button class="col-2 text-light" onclick="closeDiv()">close</button>
+    </div>
       <div id="box2" class="p-3" style="margin-top: 6em;">
         <h4 class="mx-3 py-2 text-light" style="font-family: sans-serif; font-weight: bold;">Sign In</h4>
-        <input type="number/text" class="btn btn-outline-light shadow-sm text-center rounded-pill shadow-sm text-light" style="width: 100% ;" id="acctPNumber" placeholder="Phone number/Account Number" maxlength="11"><br><br>
-        <input type="password" maxlength="10" class="btn btn-outline-light shadow-sm text-center  rounded-pill text-light" style="width:100% ; " id="userPassword" placeholder="Password"><br><br>
+        <input type="tel" class="form-control shadow-sm text-center rounded-pill shadow-sm" style="width: 100%;" id="acctPNumber" placeholder="Phone number/Account Number" maxlength="11"><br><br>
+        <input type="password" maxlength="10" class="form-control shadow-sm text-center rounded-pill" style="width:100% ; " id="userPassword" placeholder="Password"><br><br>
       </div>
     
       <span class="d-flex flex-row bd-highlight mb-3">

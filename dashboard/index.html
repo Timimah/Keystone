@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles/bootstrap.css">
     <link rel="stylesheet" href="/styles/styled.css">
 </head>
-<body style="background-color: #2d2868;">
+<body style="background-color: #2d2868;" onload="getProfile()">
     <div class="">
         <div class="header w-100">
             <nav class="navbar navbar-colored" id="navBar">
@@ -78,8 +78,8 @@
                             </div>
                         </div>
                         <div class="user-address my-2 row">
-                            <span class="col-12">Aderibigbe Julius Boston</span>
-                            <span>No. 4 Keystone Street, Sterling park</span>
+                            <span class="col-12" id="auser_name">Aderibigbe Julius Boston</span>
+                            <span id="auser_acct">No. 4 Keystone Street, Sterling park</span>
                         </div>
                     </div>
                     <div class="user-details my-4 mx-5">

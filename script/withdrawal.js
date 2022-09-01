@@ -1,6 +1,7 @@
 // let storeHistory = []
-let da = new Date()
-let cuTime = da.toLocaleString()
+
+// let da = new Date()
+// let cuTime = da.toLocaleString()
 let message2
 if (localStorage.transHist){
     storeHistory=JSON.parse(localStorage.getItem("transHist"))
@@ -23,9 +24,9 @@ if (localStorage.transHist){
 // }
 // }
 function withdraw(){
-    userPassword=user_password.value
+    userPassword = user_password.value
     amountEntered=amountentered.value
-    balance = 1000
+    // balance = 1000
     if(userPassword!=8879){
     alert("Incorrect Pin")
     }else if (amountEntered>balance){

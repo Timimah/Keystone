@@ -3,6 +3,10 @@
 } */
 body{
     min-height: 20vh;
+    background: linear-gradient(rgba(45, 40, 103, 0.8), rgba(45, 40, 103, 1)), url(../images/KEY\ STONE.jpg);
+    background-size: fixed;
+        /* background-repeat: no-repeat; */
+    background-size: cover;
    
 }
 .header{
@@ -25,7 +29,7 @@ body{
 li {
     list-style-type: none;
 }
-@media all and (max-width:1100px){
+@media all and (max-width:700px){
     .cse{
   display: none;
   visibility: hidden;
@@ -37,3 +41,8 @@ li {
         background: none;
       }
     }
+
+    a:hover {
+        background-color: #1b223c;
+        border-radius: 50px;
+      }
