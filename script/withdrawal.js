@@ -1,4 +1,5 @@
 // let storeHistory = []
+
 let da = new Date()
 let cuTime = da.toLocaleString()
 let message2
