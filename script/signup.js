@@ -24,7 +24,6 @@ let submitDetails = () =>{
     phoneNumber.focus()
 }
   else{
-    // alert()
     generateAcctNo()
     generated_acctno = generate_acctno
     generatePin() 
@@ -46,7 +45,7 @@ let submitDetails = () =>{
     }
 signupProfile.push(profile)
 localStorage.setItem("user_profile",JSON.stringify(signupProfile))
-signed_up.innerText = `You have successfully signed up. You can now log in with your phone number or your account number(${profile.accountNumber}). Your UTP (Unique Transaaction Pin) is ${profile.pinNumber}`
+(`You have successfully signed up. You can now log in with your phone number or your account number(${profile.accountNumber}). Your UTP (Unique Transaaction Pin) is ${profile.pinNumber}`)
 window.location.href = "signin.html"
 }
 
@@ -60,11 +59,4 @@ phoneNumber.value = ""
 userPassword.value = ""
 confirmPassword.value = ""
 console.log(signupProfile)
-}
-let checkPassword = () =>{
-  if(confirmPassword.value != userPassword.value){
-    confirmPassword.value = ""
-    confirmPassword.placeholder = "Passwords do not match"
-    confirmPassword.focus()
-  }
 }
