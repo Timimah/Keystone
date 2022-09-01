@@ -14,7 +14,8 @@ signIn = () =>{
                 profileNokRel: `${element.NextofKinRel}`,
                 profilePNumber: `${element.PhoneNumber}`,
                 profileAcctNo: `${element.accountNumber}`,
-                profilePin: `${element.pinNumber}`
+                profilePin: `${element.pinNumber}`,
+                userBalance: 1000
             }
             signedInUser.push(signedInUserProfile)
             // console.log(signedInUser)
