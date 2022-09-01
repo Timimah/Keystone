@@ -5,18 +5,16 @@ let message
 if (localStorage.transHist){
     storeHistory =JSON.parse(localStorage.getItem("transHist"))
 }
-let balance = 1000
-let updatedUserBalance 
-let amountEntered = 0
-// let bala
-let updatedBalance = 1000 + parseFloat(amountEntered)
-// disp.innerHTML = `$${balance}`
+if(localStorage.signedin_user){
+    signedInUser = JSON.parse(localStorage.getItem("signedin_user"))
+}
+let user_updatedBalance = []
 // localStorage.setItem("user_balance",JSON.stringify(updatedBalance))
 checkBalance = () =>{
-    let balance 
     disp.innerHTML = ""
-    disp.innerHTML += `</br><h3>Your current balance is $ ${updatedBalance} </h3>`
-    // disp.value = ""
+    signedInUser.map((item) =>{
+        disp.innerHTML += `</br><h3>Your current balance is $ ${item.userBalance} </h3>`
+    })
 }
 deposit = () =>{
 amountEntered = document.getElementById("amountentered").value
@@ -27,8 +25,13 @@ if (amountEntered == 0){
 }else if (amountEntered < 0){
     disp.innerHTML = `<h3> Can't perform this operation</h3>`
 }else {
-    updatedBalance += parseInt(amountEntered)
-    disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${updatedBalance} </h3>`
+    signedInUser.map((item) =>{
+        updatedUserBalance = item.userBalance + parseFloat(amountEntered)
+        item.userBalance = updatedUserBalance
+        localStorage.setItem("signedin_user", JSON.stringify(signedInUser))
+        disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${item.userBalance} </h3>`
+    })
+    
     tHistory.innerHTML=""
     tHistory.innerText = `You have deposited $${amountEntered}  on ${currentTime} `
     let deposit_m = {
