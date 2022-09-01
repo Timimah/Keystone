@@ -45,10 +45,10 @@ let submitDetails = () =>{
   else{
     generateAcctNo()
     generated_acctno = generate_acctno
+    console.log(generated_acctno)
     generatePin() 
     console.log(pin);
     generated_pin = pin
-    console.log(generated_pin)
     selectedNok = nextOofKin.options[nextOofKin.selectedIndex].text
     profile = {
       FirstName: first_name.value,
@@ -62,9 +62,9 @@ let submitDetails = () =>{
       accountNumber: generated_acctno,
       pinNumber: generated_pin
     }
-signupProfile.push(profile)
-localStorage.setItem("user_profile",JSON.stringify(signupProfile))
-alert(`You have successfully signed up. You can now log in with your phone number or your account number(${profile.accountNumber}). Your UTP (Unique Transaaction Pin) is ${profile.pinNumber}`)
+  signupProfile.push(profile)
+  localStorage.setItem("user_profile",JSON.stringify(signupProfile))
+  alert(`You have successfully signed up. You can now log in with your phone number or your account number(${profile.accountNumber}). Your UTP (Unique Transaaction Pin) is ${profile.pinNumber}`)
 // window.location.href = "signin.html"
   }
 
@@ -83,20 +83,11 @@ console.log(signupProfile)
 let checkPassword = () =>{
   if(userPassword.value == confirmPassword.value){
     alert("password is correct")
-  
-  }
-  else if(confirmPassword.value != userPassword.value){
-    alert("password is incorrect")
-    confirmPassword.focus()
-  }
-  else{
     submitDetails()
   }
-}
-
-generateAcctNo = () =>{
-  generate_acctno = `01${Math.round(Math.random()* 100000000)}`
-  generated_acctno = generate_acctno
-  console.log(generate_acctno)
-  console.log(generated_acctno)
+  else {
+    alert("password is incorrect")
+    confirmPassword.value = ""
+    confirmPassword.focus()
+  }
 }
