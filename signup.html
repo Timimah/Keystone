@@ -12,44 +12,52 @@
     <link rel="stylesheet" href="/styles/styled.css">
     <link rel="stylesheet" href="/styles/signup.css">
 </head>
+<style>
+    body{
+       background: linear-gradient(rgba(45, 40, 103, 0.8), rgba(45, 40, 103, 1)), url(images/KEY\ STONE.jpg);
+        background-size: fixed;
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+    }
+    input{
+        background-color: transparent;
+    }
+   </style>
 <body>
     <center>
-        <div id="box" class="py-2 col-sm-10 col-md-10 col-lg-5">
-            <div class="row text-light p-2 mx-2 my-2" style="background-color: #4c4495" id="required_div">
-                <span class="col-10">
-                    All fields are required
-                </span>
-                <button class="col-2 text-light" onclick="closeDiv()">close</button>
-            </div>
-            <h4 class="text-light mt-4">Sign Up</h6>
-            <!-- <div id="box2"> -->
-            <form class="form p-2">
-                <!-- <p class="text-light">Tap to select mobile country code:</p> -->
-                <div class="input-group">
-                    
-                <input class="form-control text-center rounded-pill" type="tel" placeholder="Phone number" class="btn btn-outline-info" id="phoneNumber" maxlength="11">
-                </div><br>
-                <input class="form-control text-center rounded-pill" type="text" placeholder="First Name" id="first_name"><br>
-                <input class="form-control text-center rounded-pill" type="text" placeholder="Middle Name" id="middle_name"><br>
-                <input class="form-control text-center rounded-pill" type="text" placeholder="Last Name" id="last_name"><br>
-                <input class="form-control text-center rounded-pill" type="text" placeholder="Address" id="user_address"><br>
-                <div class="input-group">
-                    <input class="form-control text-center rounded-pill" type="text" placeholder="Next of Kin" id="nok">&nbsp;
-                    <select class="form-select text-center rounded-pill" id="nok_rel" style="border-radius: 100rem;">
-                        <option class="bg-dark text-light" value="Father">Father</option>
-                        <option class="bg-dark text-light" value="Mother">Mother</option>
-                        <option class="bg-dark text-light" value="Brother">Brother</option>
-                        <option class="bg-dark text-light" value="Sister">Sister</option>
-                        <option class="bg-dark text-light" value="Wife">Wife</option>
-                        <option class="bg-dark text-light" value="Daughter">Daughter</option>
-                        <option class="bg-dark text-light" value="Son">Son</option>
-                    </select>
-                </div><br>
-                <input class="form-control text-center rounded-pill" type="password" placeholder="Password" id="userPassword" maxlength="10"><br>
-                <input class="form-control  text-center rounded-pill" type="password" placeholder="Confirm password" id="confirmPassword" maxlength="10" onmouseleave="checkPassword()"><br>
-                <button class="btn w-50 text-light rounded-pill" onclick="submitDetails()">Sign Up</button>
-            <p class="text-light">Have an account? <a href="signin.html">Sign In</a></p>
-            </form>
+        <div id="box" class="py-2 col-sm-10 col-md-10 col-lg-5 text-center">
+        <h4 class="text-light">Sign Up</h6>
+        <div id="box2">
+        <div class="form p-3">
+        <p class="text-light">Tap to select mobile country code:</p>
+        <div class="input-group">
+            <select id="countryCode" style="height: 37px; width: 1%;  color: white; background-color: #4c4495;" class="btn form-group form-control ">
+                <option value="Nigeria">NG +234</option>   
+                <option value="USA">US +1</option> 
+                <option value="Canada">C +1</option> 
+            </select>
+            <input class="form-group  form-control" type="text/number" placeholder="Phone number" class="btn btn-outline-info" id="phoneNumber" maxlength="11">
+        </div><br>
+        <input class="form-control text-center" type="text" placeholder="First Name" style="border-radius: 100rem;" id="first_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Middle Name" style="border-radius: 100rem;" id="middle_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Last Name" style="border-radius: 100rem;" id="last_name"><br>
+        <input class="form-control text-center" type="text" placeholder="Address" style="border-radius: 100rem;" id="user_address"><br>
+        <div class="input-group">
+            <input class="form-control text-center" type="text" placeholder="Next of Kin" style="border-radius: 100rem;" id="nok">&nbsp;
+            <select class="form-select text-center" id="nok_rel" style="border-radius: 100rem;">
+                <option class="bg-dark text-light" value="Father">Father</option>
+                <option class="bg-dark text-light" value="Mother">Mother</option>
+                <option class="bg-dark text-light" value="Brother">Brother</option>
+                <option class="bg-dark text-light" value="Sister">Sister</option>
+                <option class="bg-dark text-light" value="Wife">Wife</option>
+                <option class="bg-dark text-light" value="Daughter">Daughter</option>
+                <option class="bg-dark text-light" value="Son">Son</option>
+            </select>
+        </div><br>
+        <input class="form-control text-center" type="password" placeholder="Password" style="border-radius: 100rem;" id="userPassword" maxlength="10"><br>
+        <input class="form-control  text-center" type="password" placeholder="Confirm password" style="border-radius: 100rem;" id="confirmPassword" maxlength="10" onchange="checkPassword()"><br>
+        <button class="btn w-50 text-light" type="submit" style="border-radius: 100rem;" onclick="submitDetails()">Sign Up</button>
+        <p class="text-light">Have an account? <a href="signin.html">Sign In</a></p>
     </center>
    <script src="/script/signup.js"></script>
 </body>
