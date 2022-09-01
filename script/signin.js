@@ -6,6 +6,19 @@ signIn = () =>{
             if (element.PhoneNumber == acctPNumber.value || element.accountNumber == acctPNumber.value && element.confirmPassword == userPassword.value) {
             found = true
             // console.log(found)
+            let signedInUser = []
+            let signedInUserProfile= {
+                profileName: `${element.FirstName} ${element.MiddleName} ${element.LastName}`,
+                profileAddress: `${element.userAddress}`,
+                profileNok: `${element.NextofKin}`,
+                profileNokRel: `${element.NextofKinRel}`,
+                profilePNumber: `${element.PhoneNumber}`,
+                profileAcctNo: `${element.accountNumber}`,
+                profilePin: `${element.pinNumber}`
+            }
+            signedInUser.push(signedInUserProfile)
+            // console.log(signedInUser)
+            localStorage.setItem("signedin_user",JSON.stringify(signedInUser))
             }
         })  
     }
