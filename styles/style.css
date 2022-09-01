@@ -41,3 +41,8 @@ li {
         background: none;
       }
     }
+
+    a:hover {
+        background-color: #1b223c;
+        border-radius: 50px;
+      }
