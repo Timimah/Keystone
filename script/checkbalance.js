@@ -3,14 +3,21 @@ let currentTime = date.toLocaleString()
 let storeHistory = []
 let message 
 if (localStorage.transHist){
-    storeHistory=JSON.parse(localStorage.getItem("transHist"))
+    storeHistory =JSON.parse(localStorage.getItem("transHist"))
 }
+<<<<<<< Updated upstream
 let balance = 1000
+let updatedUserBalance 
 balance = parseFloat(balance)
+=======
+let currentBal 
+inBalance = parseFloat(inBalance)
+>>>>>>> Stashed changes
 // disp.innerHTML = `$${balance}`
 checkBalance = () =>{
+    let balance 
     disp.innerHTML = ""
-    disp.innerHTML += `</br><h3>Your current balance is $ ${balance} </h3>`
+    disp.innerHTML += `</br><h3>Your current balance is $${inBalance} </h3>`
     disp.value = ""
 }
 deposit = () =>{
@@ -22,18 +29,15 @@ if (amountEntered == 0){
 }else if (amountEntered < 0){
     disp.innerHTML = `<h3> Can't perform this operation</h3>`
 }else {
+    let balance = 1000
     balance = balance + parseInt(amountEntered)
     disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${balance} </h3>`
-    tHistory.innerHTML=""
+    tHistory.innerHTML="" 
     tHistory.innerText = `You have deposited $${amountEntered}  on ${currentTime} `
-    message = tHistory.innerText
-    console.log(message)
-    let newTransaction = {
-        transactionMessage: message
+    let deposit_m = {
+        transactionMessage: `Your deposit of $${amountEntered} on ${currentTime} was successful`
     }
-    storeHistory.push(newTransaction)
-    console.log(newTransaction)
-    console.log(storeHistory);
+    storeHistory.push(deposit_m)
     localStorage.setItem("transHist",JSON.stringify(storeHistory))
 }
 }
