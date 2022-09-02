@@ -13,7 +13,7 @@ let user_updatedBalance = []
 checkBalance = () =>{
     disp.innerHTML = ""
     signedInUser.map((item) =>{
-        disp.innerHTML += `</br><h3>Your current balance is $ ${item.userBalance} </h3>`
+        disp.innerHTML += `</br><h3>Your current balance is $${item.userBalance} </h3>`
     })
 }
 deposit = () =>{
@@ -29,7 +29,7 @@ if (amountEntered == 0){
         updatedUserBalance = item.userBalance + parseFloat(amountEntered)
          item.userBalance = updatedUserBalance
         localStorage.setItem("signedin_user", JSON.stringify(signedInUser))
-        disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${item.userBalance} </h3>`
+        disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $${item.userBalance} </h3>`
     })
     
     tHistory.innerHTML=""
