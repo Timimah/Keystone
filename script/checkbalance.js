@@ -1,6 +1,6 @@
 let date = new Date()
 let currentTime = date.toLocaleString()
-let storeHistory = []
+// let storeHistory = []
 let message 
 if (localStorage.transHist){
     storeHistory =JSON.parse(localStorage.getItem("transHist"))
@@ -27,7 +27,7 @@ if (amountEntered == 0){
 }else {
     signedInUser.map((item) =>{
         updatedUserBalance = item.userBalance + parseFloat(amountEntered)
-        item.userBalance = updatedUserBalance
+         item.userBalance = updatedUserBalance
         localStorage.setItem("signedin_user", JSON.stringify(signedInUser))
         disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $ ${item.userBalance} </h3>`
     })
