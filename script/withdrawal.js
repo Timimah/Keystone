@@ -5,7 +5,7 @@
 let da = new Date()
 let cuTime = da.toLocaleString()
 let message2
-let updatedUserBalance
+let updatedUserBalance 
 let pinNumber
 if (localStorage.transHist){
     storeHistory=JSON.parse(localStorage.getItem("transHist"))
@@ -13,11 +13,11 @@ if (localStorage.transHist){
 if(localStorage.signedin_user){
     signedInUser = JSON.parse(localStorage.getItem("signedin_user"))
 }
-// balance.innerText = `Your Current balance is $${signedInUser.userBalance}`
-// signedInUser.map((item) =>{
-//         updatedUserBalance = item.userBalance
-//         balance.innerText = `Your Current balance is $${item.userBalance}`
-//     })
+
+    moneyDisp.innerText = `${updatedUserBalance}`
+
+
+
 function withdraw(){
     
     signedInUser.map((item) =>{
@@ -30,8 +30,10 @@ function withdraw(){
     balance = updatedUserBalance
     if(userPassword!=userPin){
     alert("Incorrect Pin")
-    }else if (amountEntered >updatedUserBalance){
-        // alert()
+
+    }else if(amountEntered>updatedUserBalance){
+        updatedUserBalance = item.userBalance
+
         alert("Insufficient fund")
     }else if (amountEntered==0){
             alert("Enter a valid amount")
