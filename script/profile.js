@@ -19,9 +19,10 @@ let aprofile_acct = document.getElementById("auser_acct")
 
 getProfile = () =>{
     signedInUser.map((item) =>{
+        dashboard_head.innerText = `Hi, ${item.profileName}`
         profile_name.innerText = item.profileName
         profile_address.innerText = item.profileAddress
-        profile_number.innerText = item.profileNumber
+        profile_number.innerText = item.profilePNumber
         profile_nok.innerText = item.profileNok
         profile_nokrel.innerText = item.profileNokRel
         aprofile_name.innerText = item.profileName

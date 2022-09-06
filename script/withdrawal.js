@@ -1,5 +1,5 @@
  let storeHistory = []
- let signedInUser = []
+//  let signedInUser = []
  let signupProfile =[]
 //  let user_updatedBalance = []
 let da = new Date()
@@ -13,9 +13,15 @@ if (localStorage.transHist){
 if(localStorage.signedin_user){
     signedInUser = JSON.parse(localStorage.getItem("signedin_user"))
 }
+
     moneyDisp.innerText = `${updatedUserBalance}`
+
+
+
 function withdraw(){
+    
     signedInUser.map((item) =>{
+        updatedUserBalance = item.userBalance
         userPin = item.profilePin
     })
     userPassword = user_password.value
@@ -24,8 +30,10 @@ function withdraw(){
     balance = updatedUserBalance
     if(userPassword!=userPin){
     alert("Incorrect Pin")
+
     }else if(amountEntered>updatedUserBalance){
         updatedUserBalance = item.userBalance
+
         alert("Insufficient fund")
     }else if (amountEntered==0){
             alert("Enter a valid amount")
@@ -37,6 +45,7 @@ function withdraw(){
         item.userBalance = updatedUserBalance
         localStorage.setItem("signedin_user", JSON.stringify(signedInUser))
         withdrawMessage.innerHTML =`Your withdrawal of $${amountEntered} on ${cuTime} is successful and your new balance is $${item.userBalance}`
+        balance.innerText = `Your Current balance is $${item.userBalance}`
         })
         let withdraw_m= {
             transactionMessage2: `You withdraw $${amountEntered} on ${cuTime}`
