@@ -25,12 +25,12 @@ if (amountEntered == 0){
 }else if (amountEntered < 0){
     disp.innerHTML = `<h3> Can't perform this operation</h3>`
 }else {
-    // signedInUser.map((item) =>{
-    //     updatedUserBalance = item.userBalance + parseFloat(amountEntered)
-    //      item.userBalance = updatedUserBalance
-    //     localStorage.setItem("signedin_user", JSON.stringify(signedInUser))
+    signedInUser.map((item) =>{
+        updatedUserBalance = item.userBalance + parseFloat(amountEntered)
+         item.userBalance = updatedUserBalance
+        localStorage.setItem("signedin_user", JSON.stringify(signedInUser))
     //     disp.innerHTML = `<h3>Your deposit of $ ${amountEntered} is successful and your new balance is $${item.userBalance} </h3>`
-    // })
+    })
     
     tHistory.innerHTML=""
     tHistory.innerText = `You have deposited $${amountEntered}  on ${currentTime} `

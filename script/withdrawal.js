@@ -32,8 +32,6 @@ function withdraw(){
     alert("Incorrect Pin")
 
     }else if(amountEntered>updatedUserBalance){
-        updatedUserBalance = item.userBalance
-
         alert("Insufficient fund")
     }else if (amountEntered==0){
             alert("Enter a valid amount")
