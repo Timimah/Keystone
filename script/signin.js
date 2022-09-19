@@ -16,6 +16,7 @@ signIn = () =>{
                 profilePNumber: `${element.PhoneNumber}`,
                 profileAcctNo: `${element.accountNumber}`,
                 profilePin: `${element.pinNumber}`,
+                profilePassword:`${element.confirmPassword}`,
                 userBalance: 1000
             }
             signedInUser.push(signedInUserProfile)
